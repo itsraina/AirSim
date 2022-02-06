@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
   
   <script>
     // Current page data
@@ -25,9 +25,8 @@
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
-  
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -41,7 +40,7 @@
         <a href=".." class="icon icon-home"> AirSim</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -56,7 +55,7 @@
                     <li class="toctree-l1"><a class="reference internal" href="../CHANGELOG/">Changelog</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">Get AirSim</span></p>
+                <p class="caption"><span class="caption-text">Building AirSim</span></p>
                 <ul class="current">
                     <li class="toctree-l1"><a class="reference internal" href="../use_precompiled/">Download Binaries</a>
                     </li>
@@ -88,6 +87,8 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../unity_api_support/">Unity APIs</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../build_faq/">FAQ</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Using AirSim</span></p>
                 <ul>
@@ -115,15 +116,23 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../multi_vehicle/">Multiple Vehicles</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../sensors/">Sensors</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../lidar/">LIDAR</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../InfraredCamera/">Infrared Camera</a>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Sensors</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../sensors/">Sensors</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lidar/">LIDAR</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../distance_sensor/">Distance Sensor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../InfraredCamera/">Infrared Camera</a>
+                </li>
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../airsim_ros_pkgs/">ROS: AirSim ROS Wrapper</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../airsim_tutorial_pkgs/">ROS: AirSim Tutorial Packages</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../gazebo_drone/">Import Gazebo models</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../retexturing/">Domain Randomization</a>
                     </li>
@@ -131,12 +140,20 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../playback/">Playing Logs</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../voxel_grid/">Voxel Grid Generator</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../event_sim/">Event camera</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Design</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../design/">Architecture</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../code_structure/">Code Structure</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../adding_new_apis/">Adding new APIs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../modify_recording_data/">Modifying Recording Data</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../coding_guidelines/">Coding Guidelines</a>
                     </li>
@@ -154,6 +171,12 @@
                 <li class="toctree-l2"><a class="reference internal" href="../px4_setup/">PX4 Setup for AirSim</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../px4_sitl/">PX4 in SITL</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_sitl_wsl2/">PX4 SITL with WSL 2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_lockstep/">PX4 Lockstep</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_multi_vehicle/">PX4 Multi-vehicle in SITL</a>
                 </li>
                 <li class="toctree-l2"><a class="" href="https://youtu.be/1oY8Qu5maQQ">AirSim with Pixhawk</a>
                 </li>
@@ -215,6 +238,10 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../orbit/">Orbit Trajectory</a>
                     </li>
+                    <li class="toctree-l1"><a class="" href="https://youtu.be/Bp86WiLUC80">Importing a custom multirotor mesh</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../object_detection/">Object Detection</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Misc</span></p>
                 <ul>
@@ -269,7 +296,7 @@
     
       
         
-          <li>Get AirSim &raquo;</li>
+          <li>Building AirSim &raquo;</li>
         
       
     
@@ -284,6 +311,7 @@
   
   <hr/>
 </div>
+
           <div role="main">
             <div class="section">
               
@@ -292,16 +320,15 @@
 <ol>
 <li><a href="https://www.unrealengine.com/download">Download</a> the Epic Games Launcher. While the Unreal Engine is open source and free to download, registration is still required.</li>
 <li>Run the Epic Games Launcher, open the <code>Unreal Engine</code> tab on the left pane.
-Click on the <code>Install</code> button on the top right, which should show the option to download <strong>Unreal Engine &gt;= 4.24</strong>. Chose the install location to suit your needs, as shown in the images below. If you have multiple versions of Unreal installed then <strong>make sure the version you are using is set to <code>current</code></strong> by clicking down arrow next to the Launch button for the version.</li>
+Click on the <code>Install</code> button on the top right, which should show the option to download <strong>Unreal Engine &gt;= 4.25</strong>. Chose the install location to suit your needs, as shown in the images below. If you have multiple versions of Unreal installed then <strong>make sure the version you are using is set to <code>current</code></strong> by clicking down arrow next to the Launch button for the version.</li>
 </ol>
-<p><strong>Note</strong>: AirSim also works with UE &gt;= 4.22, however, we recommend you update to &gt;= 4.24.
-   <strong>Note</strong>: If you have UE 4.16 or older projects, please see the <a href="../unreal_upgrade/">upgrade guide</a> to upgrade your projects.</p>
+<p><strong>Note</strong>: If you have UE 4.16 or older projects, please see the <a href="../unreal_upgrade/">upgrade guide</a> to upgrade your projects.</p>
 <p><img alt="Unreal Engine Tab UI Screenshot" src="../images/ue_install.png" /></p>
 <p><img alt="Unreal Engine Install Location UI Screenshot" src="../images/ue_install_location.png" /></p>
 <h2 id="build-airsim">Build AirSim<a class="headerlink" href="#build-airsim" title="Permanent link">#</a></h2>
 <ul>
 <li>Install Visual Studio 2019.
-<strong>Make sure</strong> to select <strong>Desktop Development with C++</strong> and <strong>Windows 10 SDK 10.0.18362</strong> (should be selected by default) while installing VS 2019.</li>
+<strong>Make sure</strong> to select <strong>Desktop Development with C++</strong> and <strong>Windows 10 SDK 10.0.18362</strong> (should be selected by default) and select the latest .NET Framework SDK under the 'Individual Components' tab while installing VS 2019.</li>
 <li>Start <code>Developer Command Prompt for VS 2019</code>.</li>
 <li>
 <p>Clone the repo: <code>git clone https://github.com/Microsoft/AirSim.git</code>, and go the AirSim directory by <code>cd AirSim</code>.</p>
@@ -312,7 +339,7 @@ Click on the <code>Install</code> button on the top right, which should show the
 </li>
 </ul>
 <h2 id="build-unreal-project">Build Unreal Project<a class="headerlink" href="#build-unreal-project" title="Permanent link">#</a></h2>
-<p>Finally, you will need an Unreal project that hosts the environment for your vehicles. AirSim comes with a built-in "Blocks Environment" which you can use, or you can create your own. Please see <a href="../unreal_proj/">setting up Unreal Environment</a>.</p>
+<p>Finally, you will need an Unreal project that hosts the environment for your vehicles. Make sure to close and re-open the Unreal Engine and the Epic Games Launcher before building your first environment if you haven't done so already. After restarting the Epic Games Launcher it will ask you to associate project file extensions with Unreal Engine, click on 'fix now' to fix it. AirSim comes with a built-in "Blocks Environment" which you can use, or you can create your own. Please see <a href="../unreal_proj/">setting up Unreal Environment</a>.</p>
 <h2 id="setup-remote-control-multirotor-only">Setup Remote Control (Multirotor only)<a class="headerlink" href="#setup-remote-control-multirotor-only" title="Permanent link">#</a></h2>
 <p>A remote control is required if you want to fly manually. See the <a href="../remote_control/">remote control setup</a> for more details.</p>
 <p>Alternatively, you can use <a href="../apis/">APIs</a> for programmatic control or use the so-called <a href="../image_apis/">Computer Vision mode</a> to move around using the keyboard.</p>
@@ -321,60 +348,15 @@ Click on the <code>Install</code> button on the top right, which should show the
 <ol>
 <li>Double click on .sln file to load the Blocks project in <code>Unreal\Environments\Blocks</code> (or .sln file in your own <a href="../unreal_custenv/">custom</a> Unreal project). If you don't see .sln file then you probably haven't completed steps in Build Unreal Project section above.</li>
 <li>Select your Unreal project as Start Up project (for example, Blocks project) and make sure Build config is set to "Develop Editor" and x64.</li>
-<li>After Unreal Editor loads, press Play button. Tip: go to 'Edit-&gt;Editor Preferences', in the 'Search' box type 'CPU' and ensure that the 'Use Less CPU when in Background' is unchecked.</li>
+<li>After Unreal Editor loads, press Play button. </li>
 </ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Go to 'Edit-&gt;Editor Preferences', in the 'Search' box type 'CPU' and ensure that the 'Use Less CPU when in Background' is unchecked.</p>
+</div>
 <p>See <a href="../apis/">Using APIs</a> and <a href="../settings/">settings.json</a> for various options available.</p>
 <h1 id="airsim-on-unity-experimental">AirSim on Unity (Experimental)<a class="headerlink" href="#airsim-on-unity-experimental" title="Permanent link">#</a></h1>
-<p><a href="https://unity3d.com/">Unity</a> is another great game engine platform and we have an <strong>experimental</strong> integration of <a href="https://microsoft.github.com/AirSim/Unity">AirSim with Unity</a>. Please note that this is work in progress and all features may not work yet.</p>
-<h1 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">#</a></h1>
-<h3 id="how-to-force-unreal-to-use-visual-studio-2019">How to force Unreal to use Visual Studio 2019?<a class="headerlink" href="#how-to-force-unreal-to-use-visual-studio-2019" title="Permanent link">#</a></h3>
-<p>If the default <code>update_from_git.bat</code> file results in VS 2017 project, then you may need to run the <code>C:\Program Files\Epic Games\UE_4.24\Engine\Binaries\DotNET\UnrealBuildTool.exe</code> tool manually, with the command line options <code>-projectfiles -project=&lt;your.uproject&gt;  -game -rocket -progress -2019</code>.</p>
-<p>If you are upgrading from 4.18 to 4.24 you may also need to add <code>BuildSettingsVersion.V2</code> to your <code>*.Target.cs</code> and <code>*Editor.Target.cs</code> build files, like this:</p>
-<div class="highlight"><pre><span></span><code>    <span class="k">public</span> <span class="nf">AirSimNHTestTarget</span><span class="p">(</span><span class="n">TargetInfo</span> <span class="n">Target</span><span class="p">)</span> <span class="p">:</span> <span class="k">base</span><span class="p">(</span><span class="n">Target</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">Type</span> <span class="p">=</span> <span class="n">TargetType</span><span class="p">.</span><span class="n">Game</span><span class="p">;</span>
-        <span class="n">DefaultBuildSettings</span> <span class="p">=</span> <span class="n">BuildSettingsVersion</span><span class="p">.</span><span class="n">V2</span><span class="p">;</span>
-        <span class="n">ExtraModuleNames</span><span class="p">.</span><span class="n">AddRange</span><span class="p">(</span><span class="k">new</span> <span class="kt">string</span><span class="p">[]</span> <span class="p">{</span> <span class="s">&quot;AirSimNHTest&quot;</span> <span class="p">});</span>
-    <span class="p">}</span>
-</code></pre></div>
-
-<p>You may also need to edit this file:</p>
-<div class="highlight"><pre><span></span><code>&quot;%APPDATA%\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
-</code></pre></div>
-
-<p>And add this Compiler version setting:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;Configuration</span> <span class="na">xmlns=</span><span class="s">&quot;https://www.unrealengine.com/BuildConfiguration&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;WindowsPlatform&gt;</span>
-    <span class="nt">&lt;Compiler&gt;</span>VisualStudio2019<span class="nt">&lt;/Compiler&gt;</span>
-  <span class="nt">&lt;/WindowsPlatform&gt;</span>
-<span class="nt">&lt;/Configuration&gt;</span>
-</code></pre></div>
-
-<h3 id="im-getting-error-myproject-could-not-be-compiled-try-rebuilding-from-source-manually">I'm getting error <code>&lt;MyProject&gt; could not be compiled. Try rebuilding from source manually</code><a class="headerlink" href="#im-getting-error-myproject-could-not-be-compiled-try-rebuilding-from-source-manually" title="Permanent link">#</a></h3>
-<p>This will occur when there are compilation errors. Logs are stored in <code>&lt;My-Project&gt;\Saved\Logs</code> which can be used to figure out the problem.</p>
-<p>A common problem could be Visual Studio version conflict, AirSim uses VS 2019 while UE is using VS 2017, this can be found by searching for <code>2017</code> in the Log file. In that case, see the answer above.</p>
-<p>If you have modified the AirSim plugin files, then you can right-click the <code>.uproject</code> file, select <code>Generate Visual Studio solution file</code> and then open the <code>.sln</code> file in VS to fix the errors and build again.</p>
-<h3 id="i-get-error-c100-an-internal-error-has-occurred-in-the-compiler-when-running-buildcmd">I get <code>error C100 : An internal error has occurred in the compiler</code> when running build.cmd<a class="headerlink" href="#i-get-error-c100-an-internal-error-has-occurred-in-the-compiler-when-running-buildcmd" title="Permanent link">#</a></h3>
-<p>We have noticed this happening with VS version <code>15.9.0</code> and have checked-in a workaround in AirSim code. If you have this VS version, please make sure to pull the latest AirSim code.</p>
-<h4 id="i-get-error-corecrth-no-such-file-or-directory-or-windows-sdk-version-81-not-found">I get error "'corecrt.h': No such file or directory" or "Windows SDK version 8.1 not found"<a class="headerlink" href="#i-get-error-corecrth-no-such-file-or-directory-or-windows-sdk-version-81-not-found" title="Permanent link">#</a></h4>
-<p>Very likely you don't have <a href="https://developercommunity.visualstudio.com/content/problem/3754/cant-compile-c-program-because-of-sdk-81cant-add-a.html">Windows SDK</a> installed with Visual Studio.</p>
-<h3 id="how-do-i-use-px4-firmware-with-airsim">How do I use PX4 firmware with AirSim?<a class="headerlink" href="#how-do-i-use-px4-firmware-with-airsim" title="Permanent link">#</a></h3>
-<p>By default, AirSim uses its own built-in firmware called <a href="../simple_flight/">simple_flight</a>. There is no additional setup if you just want to go with it. If you want to switch to using PX4 instead then please see <a href="../px4_setup/">this guide</a>.</p>
-<h3 id="i-made-changes-in-visual-studio-but-there-is-no-effect">I made changes in Visual Studio but there is no effect<a class="headerlink" href="#i-made-changes-in-visual-studio-but-there-is-no-effect" title="Permanent link">#</a></h3>
-<p>Sometimes the Unreal + VS build system doesn't recompile if you make changes to only header files. To ensure a recompile, make some Unreal based cpp file "dirty" like AirSimGameMode.cpp.</p>
-<h3 id="unreal-still-uses-vs2015-or-im-getting-some-link-error">Unreal still uses VS2015 or I'm getting some link error<a class="headerlink" href="#unreal-still-uses-vs2015-or-im-getting-some-link-error" title="Permanent link">#</a></h3>
-<p>Running several versions of VS can lead to issues when compiling UE projects. One problem that may arise is that UE will try to compile with an older version of VS which may or may not work. There are two settings in Unreal, one for for the engine and one for the project, to adjust the version of VS to be used.</p>
-<ol>
-<li>Edit -&gt; Editor preferences -&gt; General -&gt; Source code -&gt; Source Code Editor</li>
-<li>Edit -&gt; Project Settings -&gt; Platforms -&gt; Windows -&gt; Toolchain -&gt;CompilerVersion</li>
-</ol>
-<p>In some cases, these settings will still not lead to the desired result and errors such as the following might be produced: LINK : fatal error LNK1181: cannot open input file 'ws2_32.lib'</p>
-<p>To resolve such issues the following procedure can be applied:</p>
-<ol>
-<li>Uninstall all old versions of VS using the <a href="https://github.com/Microsoft/VisualStudioUninstaller/releases">VisualStudioUninstaller</a></li>
-<li>Repair/Install VS 2019</li>
-<li>Restart machine and install Epic launcher and desired version of the engine</li>
-</ol>
+<p><a href="https://unity3d.com/">Unity</a> is another great game engine platform and we have an <strong>experimental</strong> integration of <a href="../Unity/">AirSim with Unity</a>. Please note that this is work in progress and all features may not work yet.</p>
               
             </div>
           </div>
@@ -395,7 +377,7 @@ Click on the <code>Install</code> button on the top right, which should show the
   <div role="contentinfo">
     <!-- Copyright etc -->
     
-      <p>Copyright &copy; 2018 Microsoft Research</p>
+      <p>Copyright &copy; 2021 Microsoft Research</p>
     
   </div>
 
@@ -410,20 +392,25 @@ Click on the <code>Install</code> button on the top right, which should show the
   </div>
 
   <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-          <a href="https://github.com/microsoft/airsim/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
-      
-      
-        <span><a href="../use_precompiled/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../build_linux/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/microsoft/airsim/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../use_precompiled/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../build_linux/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
     <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
     <script src="../js/theme.js" defer></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
       <script src="../search/main.js" defer></script>
     <script defer>
         window.onload = function () {

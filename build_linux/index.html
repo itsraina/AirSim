@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
   
   <script>
     // Current page data
@@ -25,9 +25,8 @@
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
-  
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -41,7 +40,7 @@
         <a href=".." class="icon icon-home"> AirSim</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -56,7 +55,7 @@
                     <li class="toctree-l1"><a class="reference internal" href="../CHANGELOG/">Changelog</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">Get AirSim</span></p>
+                <p class="caption"><span class="caption-text">Building AirSim</span></p>
                 <ul class="current">
                     <li class="toctree-l1"><a class="reference internal" href="../use_precompiled/">Download Binaries</a>
                     </li>
@@ -92,8 +91,6 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#faqs">FAQs</a>
-    </li>
     </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../docker_ubuntu/">Docker on Linux</a>
@@ -107,6 +104,8 @@
                     <li class="toctree-l1"><a class="reference internal" href="../custom_unity_environments/">Custom Unity Environment</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../unity_api_support/">Unity APIs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../build_faq/">FAQ</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Using AirSim</span></p>
@@ -135,15 +134,23 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../multi_vehicle/">Multiple Vehicles</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../sensors/">Sensors</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../lidar/">LIDAR</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../InfraredCamera/">Infrared Camera</a>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Sensors</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../sensors/">Sensors</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lidar/">LIDAR</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../distance_sensor/">Distance Sensor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../InfraredCamera/">Infrared Camera</a>
+                </li>
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../airsim_ros_pkgs/">ROS: AirSim ROS Wrapper</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../airsim_tutorial_pkgs/">ROS: AirSim Tutorial Packages</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../gazebo_drone/">Import Gazebo models</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../retexturing/">Domain Randomization</a>
                     </li>
@@ -151,12 +158,20 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../playback/">Playing Logs</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../voxel_grid/">Voxel Grid Generator</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../event_sim/">Event camera</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Design</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../design/">Architecture</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../code_structure/">Code Structure</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../adding_new_apis/">Adding new APIs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../modify_recording_data/">Modifying Recording Data</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../coding_guidelines/">Coding Guidelines</a>
                     </li>
@@ -174,6 +189,12 @@
                 <li class="toctree-l2"><a class="reference internal" href="../px4_setup/">PX4 Setup for AirSim</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../px4_sitl/">PX4 in SITL</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_sitl_wsl2/">PX4 SITL with WSL 2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_lockstep/">PX4 Lockstep</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_multi_vehicle/">PX4 Multi-vehicle in SITL</a>
                 </li>
                 <li class="toctree-l2"><a class="" href="https://youtu.be/1oY8Qu5maQQ">AirSim with Pixhawk</a>
                 </li>
@@ -235,6 +256,10 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../orbit/">Orbit Trajectory</a>
                     </li>
+                    <li class="toctree-l1"><a class="" href="https://youtu.be/Bp86WiLUC80">Importing a custom multirotor mesh</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../object_detection/">Object Detection</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Misc</span></p>
                 <ul>
@@ -289,7 +314,7 @@
     
       
         
-          <li>Get AirSim &raquo;</li>
+          <li>Building AirSim &raquo;</li>
         
       
     
@@ -304,6 +329,7 @@
   
   <hr/>
 </div>
+
           <div role="main">
             <div class="section">
               
@@ -312,49 +338,43 @@
 <p>Only macOS <strong>Catalina (10.15)</strong> is supported.</p>
 <p>We've two options - you can either build inside docker containers or your host machine.</p>
 <h2 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">#</a></h2>
-<p>Please see instructions <a href="https://github.com/Microsoft/AirSim/blob/master/docs/docker_ubuntu.md">here</a></p>
+<p>Please see instructions <a href="../docker_ubuntu/">here</a></p>
 <h2 id="host-machine">Host machine<a class="headerlink" href="#host-machine" title="Permanent link">#</a></h2>
 <h3 id="pre-build-setup">Pre-build Setup<a class="headerlink" href="#pre-build-setup" title="Permanent link">#</a></h3>
 <h4 id="linux-build-unreal-engine">Linux - Build Unreal Engine<a class="headerlink" href="#linux-build-unreal-engine" title="Permanent link">#</a></h4>
 <ul>
 <li>
-<p>Make sure you are <a href="https://docs.unrealengine.com/latest/INT/Platforms/Linux/BeginnerLinuxDeveloper/SettingUpAnUnrealWorkflow/1/index.html">registered with Epic Games</a>. This is required to get source code access for Unreal Engine.</p>
+<p>Make sure you are <a href="https://docs.unrealengine.com/en-US/SharingAndReleasing/Linux/BeginnerLinuxDeveloper/SettingUpAnUnrealWorkflow/index.html">registered with Epic Games</a>. This is required to get source code access for Unreal Engine.</p>
 </li>
 <li>
-<p>Clone Unreal in your favorite folder and build it (this may take a while!). <strong>Note</strong>: We only support Unreal &gt;= 4.22 at present. We recommend using 4.24.</p>
+<p>Clone Unreal in your favorite folder and build it (this may take a while!). <strong>Note</strong>: We only support Unreal &gt;= 4.25 at present. We recommend using 4.25.</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="c1"># go to the folder where you clone GitHub projects</span>
-git clone -b <span class="m">4</span>.24 https://github.com/EpicGames/UnrealEngine.git
-<span class="nb">cd</span> UnrealEngine
+<pre class="highlight"><code class="language-bash"># go to the folder where you clone GitHub projects
+git clone -b 4.25 git@github.com:EpicGames/UnrealEngine.git
+cd UnrealEngine
 ./Setup.sh
 ./GenerateProjectFiles.sh
-make
-</code></pre></div>
-
+make</code></pre>
 <h4 id="macos-download-unreal-engine">macOS - Download Unreal Engine<a class="headerlink" href="#macos-download-unreal-engine" title="Permanent link">#</a></h4>
 <ol>
 <li><a href="https://www.unrealengine.com/download">Download</a> the Epic Games Launcher. While the Unreal Engine is open source and free to download, registration is still required.</li>
 <li>Run the Epic Games Launcher, open the <code>Library</code> tab on the left pane.
-Click on the <code>Add Versions</code> which should show the option to download <strong>Unreal 4.24</strong> as shown below. If you have multiple versions of Unreal installed then <strong>make sure 4.24 is set to <code>current</code></strong> by clicking down arrow next to the Launch button for the version.</li>
+Click on the <code>Add Versions</code> which should show the option to download <strong>Unreal 4.25</strong> as shown below. If you have multiple versions of Unreal installed then <strong>make sure 4.25 is set to <code>current</code></strong> by clicking down arrow next to the Launch button for the version.</li>
 </ol>
-<p><strong>Note</strong>: AirSim also works with UE &gt;= 4.22, however, we recommend you update to 4.24.
+<p><strong>Note</strong>: AirSim also works with UE &gt;= 4.24, however, we recommend 4.25.
    <strong>Note</strong>: If you have UE 4.16 or older projects, please see the <a href="../unreal_upgrade/">upgrade guide</a> to upgrade your projects.</p>
 <h3 id="build-airsim">Build AirSim<a class="headerlink" href="#build-airsim" title="Permanent link">#</a></h3>
 <ul>
 <li>Clone AirSim and build it:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="c1"># go to the folder where you clone GitHub projects</span>
+<pre class="highlight"><code class="language-bash"># go to the folder where you clone GitHub projects
 git clone https://github.com/Microsoft/AirSim.git
-<span class="nb">cd</span> AirSim
-</code></pre></div>
-
-<p>By default AirSim uses clang 8 to build for compatibility with UE 4.24. The setup script will install the right version of cmake, llvm, and eigen.</p>
-<div class="highlight"><pre><span></span><code>./setup.sh
+cd AirSim</code></pre>
+<p>By default AirSim uses clang 8 to build for compatibility with UE 4.25. The setup script will install the right version of cmake, llvm, and eigen.</p>
+<pre class="highlight"><code class="language-bash">./setup.sh
 ./build.sh
-<span class="c1"># use ./build.sh --debug to build in debug mode</span>
-</code></pre></div>
-
+# use ./build.sh --debug to build in debug mode</code></pre>
 <h3 id="build-unreal-environment">Build Unreal Environment<a class="headerlink" href="#build-unreal-environment" title="Permanent link">#</a></h3>
 <p>Finally, you will need an Unreal project that hosts the environment for your vehicles. AirSim comes with a built-in "Blocks Environment" which you can use, or you can create your own. Please see <a href="../unreal_proj/">setting up Unreal Environment</a> if you'd like to setup your own environment.</p>
 <h2 id="how-to-use-airsim">How to Use AirSim<a class="headerlink" href="#how-to-use-airsim" title="Permanent link">#</a></h2>
@@ -370,80 +390,18 @@ git clone https://github.com/Microsoft/AirSim.git
 <h3 id="mac">Mac<a class="headerlink" href="#mac" title="Permanent link">#</a></h3>
 <ul>
 <li>Browse to <code>AirSim/Unreal/Environments/Blocks</code>.</li>
-<li>Run <code>./GenerateProjectFiles.sh &lt;UE_PATH&gt;</code> from the terminal, where <code>UE_PATH</code> is the path to the Unreal installation folder. (By default, this is <code>/Users/Shared/Epic\ Games/UE_4.24/</code>) The script creates an XCode workspace by the name Blocks.xcworkspace.</li>
+<li>Run <code>./GenerateProjectFiles.sh &lt;UE_PATH&gt;</code> from the terminal, where <code>UE_PATH</code> is the path to the Unreal installation folder. (By default, this is <code>/Users/Shared/Epic\ Games/UE_4.25/</code>) The script creates an XCode workspace by the name Blocks.xcworkspace.</li>
 <li>Open the XCode workspace, and press the Build and run button in the top left.</li>
 <li>After Unreal Editor loads, press Play button.</li>
 </ul>
-<p>See <a href="../apis/">Using APIs</a> and <a href="../settings/">settings.json</a> for various options available for AirSim usage.
-Tip: go to 'Edit-&gt;Editor Preferences', in the 'Search' box type 'CPU' and ensure that the 'Use Less CPU when in Background' is unchecked.</p>
+<p>See <a href="../apis/">Using APIs</a> and <a href="../settings/">settings.json</a> for various options available for AirSim usage.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Go to 'Edit-&gt;Editor Preferences', in the 'Search' box type 'CPU' and ensure that the 'Use Less CPU when in Background' is unchecked.</p>
+</div>
 <h3 id="optional-setup-remote-control-multirotor-only">[Optional] Setup Remote Control (Multirotor Only)<a class="headerlink" href="#optional-setup-remote-control-multirotor-only" title="Permanent link">#</a></h3>
 <p>A remote control is required if you want to fly manually. See the <a href="../remote_control/">remote control setup</a> for more details.</p>
 <p>Alternatively, you can use <a href="../apis/">APIs</a> for programmatic control or use the so-called <a href="../image_apis/">Computer Vision mode</a> to move around using the keyboard.</p>
-<h2 id="faqs">FAQs<a class="headerlink" href="#faqs" title="Permanent link">#</a></h2>
-<ul>
-<li>I'm getting error <code>&lt;MyProject&gt; could not be compiled. Try rebuilding from source manually</code>.<ul>
-<li>This could either happen because of compile error or the fact that your gch files are outdated. Look in to your console window. Do you see something like below?</li>
-</ul>
-</li>
-</ul>
-<p><code>fatal error: file '/usr/include/linux/version.h''/usr/include/linux/version.h' has been modified since the precompiled header</code></p>
-<ul>
-<li>
-<p>If this is the case then look for *.gch file(s) that follows after that message, delete them and try again. Here's <a href="https://answers.unrealengine.com/questions/412349/linux-ue4-build-precompiled-header-fatal-error.html">relevant thread</a> on Unreal Engine forums.</p>
-</li>
-<li>
-<p>If you see other compile errors in console then open up those source files and see if it is due to changes you made. If not, then report it as issue on GitHub.</p>
-</li>
-<li>
-<p>Unreal crashed! How do I know what went wrong?</p>
-<ul>
-<li>Go to the <code>MyUnrealProject/Saved/Crashes</code> folder and search for the file <code>MyProject.log</code> within its subdirectories. At the end of this file you will see the stack trace and messages.
-You can also take a look at the <code>Diagnostics.txt</code> file.</li>
-</ul>
-</li>
-<li>
-<p>How do I use an IDE on Linux?</p>
-<ul>
-<li>You can use Qt Creator or CodeLite. Instructions for Qt Creator are available <a href="https://docs.unrealengine.com/latest/INT/Platforms/Linux/BeginnerLinuxDeveloper/SettingUpAnIDE/index.html">here</a>.</li>
-</ul>
-</li>
-<li>
-<p>Can I cross compile for Linux from a Windows machine?</p>
-<ul>
-<li>Yes, you can, but we haven't tested it. You can find the instructions <a href="https://docs.unrealengine.com/latest/INT/Platforms/Linux/GettingStarted/index.html">here</a>.</li>
-</ul>
-</li>
-<li>
-<p>What compiler and stdlib does AirSim use?</p>
-<ul>
-<li>We use the same compiler that Unreal Engine uses, <strong>Clang 8</strong>, and stdlib, <strong>libc++</strong>. AirSim's <code>setup.sh</code> will automatically download them.</li>
-</ul>
-</li>
-<li>
-<p>What version of CMake does the AirSim build use?</p>
-<ul>
-<li>3.10.0 or higher. This is <em>not</em> the default in Ubuntu 16.04 so setup.sh installs it for you. You can check your CMake version using <code>cmake --version</code>. If you have an older version, follow <a href="../cmake_linux/">these instructions</a> or see the <a href="https://cmake.org/install/">CMake website</a>.</li>
-</ul>
-</li>
-<li>
-<p>Can I compile AirSim in BashOnWindows?</p>
-<ul>
-<li>Yes, however, you can't run Unreal from BashOnWindows. So this is kind of useful to check a Linux compile, but not for an end-to-end run.
-See the <a href="https://msdn.microsoft.com/en-us/commandline/wsl/install_guide">BashOnWindows install guide</a>.
-Make sure to have the latest version (Windows 10 Creators Edition) as previous versions had various issues.
-Also, don't invoke <code>bash</code> from <code>Visual Studio Command Prompt</code>, otherwise CMake might find VC++ and try and use that!</li>
-</ul>
-</li>
-<li>
-<p>Where can I find more info on running Unreal on Linux?</p>
-<ul>
-<li>Start here: <a href="https://docs.unrealengine.com/latest/INT/Platforms/Linux/index.html">Unreal on Linux</a></li>
-<li><a href="https://wiki.unrealengine.com/Building_On_Linux#Clang">Building Unreal on Linux</a></li>
-<li><a href="https://wiki.unrealengine.com/Linux_Support">Unreal Linux Support</a></li>
-<li><a href="https://wiki.unrealengine.com/Compiling_For_Linux">Unreal Cross Compilation</a></li>
-</ul>
-</li>
-</ul>
               
             </div>
           </div>
@@ -464,7 +422,7 @@ Also, don't invoke <code>bash</code> from <code>Visual Studio Command Prompt</co
   <div role="contentinfo">
     <!-- Copyright etc -->
     
-      <p>Copyright &copy; 2018 Microsoft Research</p>
+      <p>Copyright &copy; 2021 Microsoft Research</p>
     
   </div>
 
@@ -479,20 +437,25 @@ Also, don't invoke <code>bash</code> from <code>Visual Studio Command Prompt</co
   </div>
 
   <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-          <a href="https://github.com/microsoft/airsim/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
-      
-      
-        <span><a href="../build_windows/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../docker_ubuntu/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/microsoft/airsim/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../build_windows/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../docker_ubuntu/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
     <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
     <script src="../js/theme.js" defer></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
       <script src="../search/main.js" defer></script>
     <script defer>
         window.onload = function () {

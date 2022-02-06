@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
   
   <script>
     // Current page data
@@ -25,9 +25,8 @@
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
-  
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -41,7 +40,7 @@
         <a href=".." class="icon icon-home"> AirSim</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -56,7 +55,7 @@
                     <li class="toctree-l1"><a class="reference internal" href="../CHANGELOG/">Changelog</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">Get AirSim</span></p>
+                <p class="caption"><span class="caption-text">Building AirSim</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../use_precompiled/">Download Binaries</a>
                     </li>
@@ -75,6 +74,8 @@
                     <li class="toctree-l1"><a class="reference internal" href="../custom_unity_environments/">Custom Unity Environment</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../unity_api_support/">Unity APIs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../build_faq/">FAQ</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Using AirSim</span></p>
@@ -117,15 +118,23 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../multi_vehicle/">Multiple Vehicles</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../sensors/">Sensors</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../lidar/">LIDAR</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../InfraredCamera/">Infrared Camera</a>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Sensors</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../sensors/">Sensors</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lidar/">LIDAR</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../distance_sensor/">Distance Sensor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../InfraredCamera/">Infrared Camera</a>
+                </li>
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../airsim_ros_pkgs/">ROS: AirSim ROS Wrapper</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../airsim_tutorial_pkgs/">ROS: AirSim Tutorial Packages</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../gazebo_drone/">Import Gazebo models</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../retexturing/">Domain Randomization</a>
                     </li>
@@ -133,12 +142,20 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../playback/">Playing Logs</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../voxel_grid/">Voxel Grid Generator</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../event_sim/">Event camera</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Design</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../design/">Architecture</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../code_structure/">Code Structure</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../adding_new_apis/">Adding new APIs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../modify_recording_data/">Modifying Recording Data</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../coding_guidelines/">Coding Guidelines</a>
                     </li>
@@ -156,6 +173,12 @@
                 <li class="toctree-l2"><a class="reference internal" href="../px4_setup/">PX4 Setup for AirSim</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../px4_sitl/">PX4 in SITL</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_sitl_wsl2/">PX4 SITL with WSL 2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_lockstep/">PX4 Lockstep</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_multi_vehicle/">PX4 Multi-vehicle in SITL</a>
                 </li>
                 <li class="toctree-l2"><a class="" href="https://youtu.be/1oY8Qu5maQQ">AirSim with Pixhawk</a>
                 </li>
@@ -216,6 +239,10 @@
                     <li class="toctree-l1"><a class="reference internal" href="../drone_survey/">Surveying Using Drone</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../orbit/">Orbit Trajectory</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="https://youtu.be/Bp86WiLUC80">Importing a custom multirotor mesh</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../object_detection/">Object Detection</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Misc</span></p>
@@ -286,6 +313,7 @@
   
   <hr/>
 </div>
+
           <div role="main">
             <div class="section">
               
@@ -298,77 +326,77 @@
 <li>Include folders: <code>$(ProjectDir)..\AirLib\deps\rpclib\include;include;$(ProjectDir)..\AirLib\deps\eigen3;$(ProjectDir)..\AirLib\include</code></li>
 <li>Dependencies: <code>rpc.lib</code></li>
 <li>Lib folders: <code>$(ProjectDir)\..\AirLib\deps\MavLinkCom\lib\$(Platform)\$(Configuration);$(ProjectDir)\..\AirLib\deps\rpclib\lib\$(Platform)\$(Configuration);$(ProjectDir)\..\AirLib\lib\$(Platform)\$(Configuration)</code></li>
+<li>References: Reference AirLib and MavLinkCom to the project references. (Right click your project then go to <code>References</code>, <code>Add reference...</code>, and then select AirLib and MavLinkCom)</li>
 </ul>
 <h2 id="hello-car">Hello Car<a class="headerlink" href="#hello-car" title="Permanent link">#</a></h2>
 <p>Here's how to use AirSim APIs using C++ to control simulated car (see also <a href="../apis/#hello_car">Python example</a>):</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// ready to run example: https://github.com/Microsoft/AirSim/blob/master/HelloCar/main.cpp</span>
+<pre class="highlight"><code class="language-cpp">
+// ready to run example: https://github.com/Microsoft/AirSim/blob/master/HelloCar/main.cpp
 
-<span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;vehicles/car/api/CarRpcLibClient.hpp&quot;</span><span class="cp"></span>
+#include &lt;iostream&gt;
+#include "vehicles/car/api/CarRpcLibClient.hpp"
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> 
-<span class="p">{</span>
-    <span class="n">msr</span><span class="o">::</span><span class="n">airlib</span><span class="o">::</span><span class="n">CarRpcLibClient</span> <span class="n">client</span><span class="p">;</span>
-    <span class="n">client</span><span class="p">.</span><span class="n">enableApiControl</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span> <span class="c1">//this disables manual control</span>
-    <span class="n">CarControllerBase</span><span class="o">::</span><span class="n">CarControls</span> <span class="n">controls</span><span class="p">;</span>
+int main() 
+{
+    msr::airlib::CarRpcLibClient client;
+    client.enableApiControl(true); //this disables manual control
+    CarControllerBase::CarControls controls;
 
-    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Press enter to drive forward&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span> <span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
-    <span class="n">controls</span><span class="p">.</span><span class="n">throttle</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="n">client</span><span class="p">.</span><span class="n">setCarControls</span><span class="p">(</span><span class="n">controls</span><span class="p">);</span>
+    std::cout &lt;&lt; "Press enter to drive forward" &lt;&lt; std::endl; std::cin.get();
+    controls.throttle = 1;
+    client.setCarControls(controls);
 
-    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Press Enter to activate handbrake&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span> <span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
-    <span class="n">controls</span><span class="p">.</span><span class="n">handbrake</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
-    <span class="n">client</span><span class="p">.</span><span class="n">setCarControls</span><span class="p">(</span><span class="n">controls</span><span class="p">);</span>
+    std::cout &lt;&lt; "Press Enter to activate handbrake" &lt;&lt; std::endl; std::cin.get();
+    controls.handbrake = true;
+    client.setCarControls(controls);
 
-    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Press Enter to take turn and drive backward&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span> <span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
-    <span class="n">controls</span><span class="p">.</span><span class="n">handbrake</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
-    <span class="n">controls</span><span class="p">.</span><span class="n">throttle</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-    <span class="n">controls</span><span class="p">.</span><span class="n">steering</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="n">client</span><span class="p">.</span><span class="n">setCarControls</span><span class="p">(</span><span class="n">controls</span><span class="p">);</span>
+    std::cout &lt;&lt; "Press Enter to take turn and drive backward" &lt;&lt; std::endl; std::cin.get();
+    controls.handbrake = false;
+    controls.throttle = -1;
+    controls.steering = 1;
+    client.setCarControls(controls);
 
-    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Press Enter to stop&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span> <span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
-    <span class="n">client</span><span class="p">.</span><span class="n">setCarControls</span><span class="p">(</span><span class="n">CarControllerBase</span><span class="o">::</span><span class="n">CarControls</span><span class="p">());</span>
+    std::cout &lt;&lt; "Press Enter to stop" &lt;&lt; std::endl; std::cin.get();
+    client.setCarControls(CarControllerBase::CarControls());
 
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-
+    return 0;
+}</code></pre>
 <h2 id="hello-drone">Hello Drone<a class="headerlink" href="#hello-drone" title="Permanent link">#</a></h2>
 <p>Here's how to use AirSim APIs using C++ to control simulated quadrotor (see also <a href="../apis/#hello_drone">Python example</a>):</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// ready to run example: https://github.com/Microsoft/AirSim/blob/master/HelloDrone/main.cpp</span>
+<pre class="highlight"><code class="language-cpp">
+// ready to run example: https://github.com/Microsoft/AirSim/blob/master/HelloDrone/main.cpp
 
-<span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;vehicles/multirotor/api/MultirotorRpcLibClient.hpp&quot;</span><span class="cp"></span>
+#include &lt;iostream&gt;
+#include "vehicles/multirotor/api/MultirotorRpcLibClient.hpp"
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> 
-<span class="p">{</span>
-    <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-    <span class="n">msr</span><span class="o">::</span><span class="n">airlib</span><span class="o">::</span><span class="n">MultirotorRpcLibClient</span> <span class="n">client</span><span class="p">;</span>
+int main() 
+{
+    using namespace std;
+    msr::airlib::MultirotorRpcLibClient client;
 
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Press Enter to enable API control&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
-    <span class="n">client</span><span class="p">.</span><span class="n">enableApiControl</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+    cout &lt;&lt; "Press Enter to enable API control" &lt;&lt; endl; cin.get();
+    client.enableApiControl(true);
 
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Press Enter to arm the drone&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
-    <span class="n">client</span><span class="p">.</span><span class="n">armDisarm</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+    cout &lt;&lt; "Press Enter to arm the drone" &lt;&lt; endl; cin.get();
+    client.armDisarm(true);
 
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Press Enter to takeoff&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
-    <span class="n">client</span><span class="p">.</span><span class="n">takeoffAsync</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">waitOnLastTask</span><span class="p">();</span>
+    cout &lt;&lt; "Press Enter to takeoff" &lt;&lt; endl; cin.get();
+    client.takeoffAsync(5)-&gt;waitOnLastTask();
 
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Press Enter to move 5 meters in x direction with 1 m/s velocity&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>  
-    <span class="k">auto</span> <span class="n">position</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">getMultirotorState</span><span class="p">().</span><span class="n">getPosition</span><span class="p">();</span> <span class="c1">// from current location</span>
-    <span class="n">client</span><span class="p">.</span><span class="n">moveToPositionAsync</span><span class="p">(</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="p">()</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="p">(),</span> <span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="p">(),</span> <span class="mi">1</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">waitOnLastTask</span><span class="p">();</span>
+    cout &lt;&lt; "Press Enter to move 5 meters in x direction with 1 m/s velocity" &lt;&lt; endl; cin.get();  
+    auto position = client.getMultirotorState().getPosition(); // from current location
+    client.moveToPositionAsync(position.x() + 5, position.y(), position.z(), 1)-&gt;waitOnLastTask();
 
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Press Enter to land&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
-    <span class="n">client</span><span class="p">.</span><span class="n">landAsync</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">waitOnLastTask</span><span class="p">();</span>
+    cout &lt;&lt; "Press Enter to land" &lt;&lt; endl; cin.get();
+    client.landAsync()-&gt;waitOnLastTask();
 
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-
+    return 0;
+}</code></pre>
 <h2 id="see-also">See Also<a class="headerlink" href="#see-also" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="../Examples">Examples</a> of how to use internal infrastructure in AirSim in your other projects</li>
-<li><a href="../DroneShell">DroneShell</a> app shows how to make simple interface using C++ APIs to control drones</li>
+<li><a href="https://github.com/microsoft/AirSim/tree/master/Examples">Examples</a> of how to use internal infrastructure in AirSim in your other projects</li>
+<li><a href="https://github.com/microsoft/AirSim/tree/master/DroneShell">DroneShell</a> app shows how to make simple interface using C++ APIs to control drones</li>
+<li><a href="https://github.com/microsoft/AirSim/tree/master/HelloSpawnedDrones">HelloSpawnedDrones</a> app shows how to make additional vehicles on the fly</li>
 <li><a href="../apis/">Python APIs</a></li>
 </ul>
               
@@ -391,7 +419,7 @@
   <div role="contentinfo">
     <!-- Copyright etc -->
     
-      <p>Copyright &copy; 2018 Microsoft Research</p>
+      <p>Copyright &copy; 2021 Microsoft Research</p>
     
   </div>
 
@@ -406,20 +434,25 @@
   </div>
 
   <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-          <a href="https://github.com/microsoft/airsim/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
-      
-      
-        <span><a href="../image_apis/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../api_docs/html/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/microsoft/airsim/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../image_apis/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../api_docs/html/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
     <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
     <script src="../js/theme.js" defer></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
       <script src="../search/main.js" defer></script>
     <script defer>
         window.onload = function () {

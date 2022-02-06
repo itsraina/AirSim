@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
   
   <script>
     // Current page data
@@ -25,9 +25,8 @@
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
-  
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -41,7 +40,7 @@
         <a href=".." class="icon icon-home"> AirSim</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -56,7 +55,7 @@
                     <li class="toctree-l1"><a class="reference internal" href="../CHANGELOG/">Changelog</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">Get AirSim</span></p>
+                <p class="caption"><span class="caption-text">Building AirSim</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../use_precompiled/">Download Binaries</a>
                     </li>
@@ -75,6 +74,8 @@
                     <li class="toctree-l1"><a class="reference internal" href="../custom_unity_environments/">Custom Unity Environment</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../unity_api_support/">Unity APIs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../build_faq/">FAQ</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Using AirSim</span></p>
@@ -103,21 +104,33 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../multi_vehicle/">Multiple Vehicles</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../sensors/">Sensors</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../lidar/">LIDAR</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../InfraredCamera/">Infrared Camera</a>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Sensors</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../sensors/">Sensors</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lidar/">LIDAR</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../distance_sensor/">Distance Sensor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../InfraredCamera/">Infrared Camera</a>
+                </li>
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../airsim_ros_pkgs/">ROS: AirSim ROS Wrapper</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../airsim_tutorial_pkgs/">ROS: AirSim Tutorial Packages</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../gazebo_drone/">Import Gazebo models</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../retexturing/">Domain Randomization</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../meshes/">Mesh Vertex Buffers</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../playback/">Playing Logs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../voxel_grid/">Voxel Grid Generator</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../event_sim/">Event camera</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Design</span></p>
@@ -126,7 +139,25 @@
                     </li>
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Code Structure</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#airlib">AirLib</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#unrealpluginsairsim">Unreal/Plugins/AirSim</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mavlinkcom">MavLinkCom</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sample-programs">Sample Programs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pythonclient">PythonClient</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#contributing">Contributing</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#unreal-framework">Unreal Framework</a>
+    </li>
     </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../adding_new_apis/">Adding new APIs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../modify_recording_data/">Modifying Recording Data</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../coding_guidelines/">Coding Guidelines</a>
                     </li>
@@ -144,6 +175,12 @@
                 <li class="toctree-l2"><a class="reference internal" href="../px4_setup/">PX4 Setup for AirSim</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../px4_sitl/">PX4 in SITL</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_sitl_wsl2/">PX4 SITL with WSL 2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_lockstep/">PX4 Lockstep</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_multi_vehicle/">PX4 Multi-vehicle in SITL</a>
                 </li>
                 <li class="toctree-l2"><a class="" href="https://youtu.be/1oY8Qu5maQQ">AirSim with Pixhawk</a>
                 </li>
@@ -204,6 +241,10 @@
                     <li class="toctree-l1"><a class="reference internal" href="../drone_survey/">Surveying Using Drone</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../orbit/">Orbit Trajectory</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="https://youtu.be/Bp86WiLUC80">Importing a custom multirotor mesh</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../object_detection/">Object Detection</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Misc</span></p>
@@ -274,27 +315,40 @@
   
   <hr/>
 </div>
+
           <div role="main">
             <div class="section">
               
-                <h2 id="airlib">AirLib<a class="headerlink" href="#airlib" title="Permanent link">#</a></h2>
+                <h1 id="code-structure">Code Structure<a class="headerlink" href="#code-structure" title="Permanent link">#</a></h1>
+<h2 id="airlib">AirLib<a class="headerlink" href="#airlib" title="Permanent link">#</a></h2>
 <p>Majority of the code is located in AirLib. This is a self-contained library that you should be able to compile with any C++11 compiler.</p>
-<p>AirLib consists of the following components:
-1. <em>Physics engine:</em> This is header-only physics engine. It is designed to be fast and extensible to implement different vehicles.
-2. <em>Sensor models:</em> This is header-only models for Barometer, IMU, GPS and Magnetometer
-3. <em>Vehicle models:</em> This is header-only models for vehicle configurations and models. Currently we have implemented model for a MultiRotor and a configuration for PX4 QuadRotor in the X config.
-4. <em>Control library:</em> This part of AirLib provides abstract base class for our APIs and concrete implementation for specific vehicle platforms such as MavLink. It also has classes for the RPC client and server.</p>
+<p>AirLib consists of the following components:</p>
+<ol>
+<li><a href="https://github.com/microsoft/AirSim/tree/master/AirLib/include/physics"><em>Physics engine:</em></a> This is header-only physics engine. It is designed to be fast and extensible to implement different vehicles.</li>
+<li><a href="https://github.com/microsoft/AirSim/tree/master/AirLib/include/sensors"><em>Sensor models:</em></a> This is header-only models for Barometer, IMU, GPS and Magnetometer.</li>
+<li><a href="https://github.com/microsoft/AirSim/tree/master/AirLib/include/vehiclesr"><em>Vehicle models:</em></a> This is header-only models for vehicle configurations and models. Currently we have implemented model for a MultiRotor and a configuration for PX4 QuadRotor in the X config. There are several different Multirotor models defined in MultiRotorParams.hpp including a hexacopter as well.</li>
+<li><a href="https://github.com/microsoft/AirSim/tree/master/AirLib/include/api"><em>API-related files:</em></a> This part of AirLib provides abstract base class for our APIs and concrete implementation for specific vehicle platforms such as MavLink. It also has classes for the RPC client and server.</li>
+</ol>
+<p>Apart from these, all common utilities are defined in <a href="https://github.com/microsoft/AirSim/tree/master/AirLib/include/common"><code>common/</code></a> subfolder. One important file here is <a href="https://github.com/microsoft/AirSim/blob/master/AirLib/include/common/AirSimSettings.hpp">AirSimSettings.hpp</a> which should be modified if any new fields are to be added in <code>settings.json</code>.</p>
+<p>AirSim supports different firmwares for Multirotor such as its own SimpleFlight, PX4 and ArduPilot, files for communicating with each firmware are placed in their respective subfolders in <a href="https://github.com/microsoft/AirSim/tree/master/AirLib/include/vehicles/multirotor/firmwares"><code>multirotor/firmwares</code></a>.</p>
+<p>The vehicle-specific APIs are defined in the <code>api/</code> subfolder, along-with required structs. The <a href="https://github.com/microsoft/AirSim/tree/master/AirLib/src"><code>AirLib/src/</code></a> contains .cpp files with implementations of various mehtods defined in the .hpp files. For e.g. <a href="https://github.com/microsoft/AirSim/blob/master/AirLib/src/vehicles/multirotor/api/MultirotorApiBase.cpp">MultirotorApiBase.cpp</a> contains the base implementation of the multirotor APIs, which can also be overridden in the specific firmware files if required.</p>
 <h2 id="unrealpluginsairsim">Unreal/Plugins/AirSim<a class="headerlink" href="#unrealpluginsairsim" title="Permanent link">#</a></h2>
-<p>This is the only portion of project which is dependent on Unreal engine. We have kept it isolated so we can implement simulator for other platforms as well (for example, Unity). The Unreal code takes advantage of its UObject based classes including Blueprints.
-1. <em>SimMode_ classes</em>: We wish to support various simulator modes such as pure Computer Vision mode where there is no drone. The SimMode classes help implement many different modes.
-2. <em>VehiclePawnBase</em>: This is the base class for all vehicle pawn visualizations.
-3. <em>VehicleBase</em>: This class provides abstract interface to implement a combination of rendering component (i.e. Unreal pawn), physics component (i.e. MultiRotor) and controller (i.e. MavLinkHelper).</p>
+<p>This is the only portion of project which is dependent on Unreal engine. We have kept it isolated so we can implement simulator for other platforms as well, as has been done for <a href="https://microsoft.github.io/AirSim/Unity.html">Unity</a>. The Unreal code takes advantage of its UObject based classes including Blueprints. The <code>Source/</code> folder contains the C++ files, while the <code>Content/</code> folder has the blueprints and assets. Some main components are described below:</p>
+<ol>
+<li><em>SimMode_ classes</em>: The SimMode classes help implement many different modes, such as pure Computer Vision mode, where there is no vehicle or simulation for a specific vehicle (currently car and multirotor). The vehicle classes are located in <a href="https://github.com/microsoft/AirSim/tree/master/Unreal/Plugins/AirSim/Source/Vehicles"><code>Vehicles/</code></a></li>
+<li><em>PawnSimApi</em>: This is the <a href="https://github.com/microsoft/AirSim/blob/master/Unreal/Plugins/AirSim/Source/PawnSimApi.cpp">base class</a> for all vehicle pawn visualizations. Each vehicle has their own child (Multirotor|Car|ComputerVision)Pawn class.</li>
+<li><a href="https://github.com/microsoft/AirSim/tree/master/Unreal/Plugins/AirSim/Source/UnrealSensors">UnrealSensors</a>: Contains implementation of Distance and Lidar sensors.</li>
+<li><em>WorldSimApi</em>: Implements most of the environment and vehicle-agnostic APIs</li>
+</ol>
+<p>Apart from these, <a href="https://github.com/microsoft/AirSim/blob/master/Unreal/Plugins/AirSim/Source/PIPCamera.cpp"><code>PIPCamera</code></a> contains the camera initialization, and <a href="https://github.com/microsoft/AirSim/blob/master/Unreal/Plugins/AirSim/Source/UnrealImageCapture.cpp"><code>UnrealImageCapture</code></a> &amp; <a href="https://github.com/microsoft/AirSim/blob/master/Unreal/Plugins/AirSim/Source/RenderRequest.cpp"><code>RenderRequest</code></a> the image rendering code. <a href="https://github.com/microsoft/AirSim/blob/master/Unreal/Plugins/AirSim/Source/AirBlueprintLib.cpp"><code>AirBlueprintLib</code></a> has a lot of utility and wrapper methods used to interface with the UE4 engine.</p>
 <h2 id="mavlinkcom">MavLinkCom<a class="headerlink" href="#mavlinkcom" title="Permanent link">#</a></h2>
 <p>This is the library developed by our own team member <a href="https://github.com/lovettchris">Chris Lovett</a> that provides C++ classes to talk to the MavLink devices. This library is stand alone and can be used in any project.
-See <a href="https://github.com/Microsoft/AirSim/tree/master/MavLinkCom//README.md">MavLinkCom</a> for more info.</p>
+See <a href="../mavlinkcom/">MavLinkCom</a> for more info.</p>
 <h2 id="sample-programs">Sample Programs<a class="headerlink" href="#sample-programs" title="Permanent link">#</a></h2>
-<p>We have created a few sample programs to demonstrate how to use the API. See HelloDrone and DroneShell. 
+<p>We have created a few sample programs to demonstrate how to use the API. See HelloDrone and DroneShell.
 DroneShell demonstrates how to connect to the simulator using UDP.  The simulator is running a server (similar to DroneServer).</p>
+<h2 id="pythonclient">PythonClient<a class="headerlink" href="#pythonclient" title="Permanent link">#</a></h2>
+<p><a href="https://github.com/microsoft/AirSim/tree/master/PythonClient">PythonClient</a> contains Python API wrapper files and sample programs demonstrating their uses.</p>
 <h2 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permanent link">#</a></h2>
 <p>See <a href="../CONTRIBUTING/">Contribution Guidelines</a></p>
 <h2 id="unreal-framework">Unreal Framework<a class="headerlink" href="#unreal-framework" title="Permanent link">#</a></h2>
@@ -307,7 +361,7 @@ DroneShell demonstrates how to connect to the simulator using UDP.  The simulato
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../coding_guidelines/" class="btn btn-neutral float-right" title="Coding Guidelines">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../adding_new_apis/" class="btn btn-neutral float-right" title="Adding new APIs">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../design/" class="btn btn-neutral" title="Architecture"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -320,7 +374,7 @@ DroneShell demonstrates how to connect to the simulator using UDP.  The simulato
   <div role="contentinfo">
     <!-- Copyright etc -->
     
-      <p>Copyright &copy; 2018 Microsoft Research</p>
+      <p>Copyright &copy; 2021 Microsoft Research</p>
     
   </div>
 
@@ -335,20 +389,25 @@ DroneShell demonstrates how to connect to the simulator using UDP.  The simulato
   </div>
 
   <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-          <a href="https://github.com/microsoft/airsim/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
-      
-      
-        <span><a href="../design/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../coding_guidelines/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/microsoft/airsim/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../design/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../adding_new_apis/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
     <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
     <script src="../js/theme.js" defer></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
       <script src="../search/main.js" defer></script>
     <script defer>
         window.onload = function () {

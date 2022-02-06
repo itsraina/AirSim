@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
   
   <script>
     // Current page data
@@ -25,9 +25,8 @@
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
-  
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -41,7 +40,7 @@
         <a href=".." class="icon icon-home"> AirSim</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -56,7 +55,7 @@
                     <li class="toctree-l1"><a class="reference internal" href="../CHANGELOG/">Changelog</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">Get AirSim</span></p>
+                <p class="caption"><span class="caption-text">Building AirSim</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../use_precompiled/">Download Binaries</a>
                     </li>
@@ -75,6 +74,8 @@
                     <li class="toctree-l1"><a class="reference internal" href="../custom_unity_environments/">Custom Unity Environment</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../unity_api_support/">Unity APIs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../build_faq/">FAQ</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Using AirSim</span></p>
@@ -103,15 +104,23 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../multi_vehicle/">Multiple Vehicles</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../sensors/">Sensors</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../lidar/">LIDAR</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../InfraredCamera/">Infrared Camera</a>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Sensors</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../sensors/">Sensors</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lidar/">LIDAR</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../distance_sensor/">Distance Sensor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../InfraredCamera/">Infrared Camera</a>
+                </li>
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../airsim_ros_pkgs/">ROS: AirSim ROS Wrapper</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../airsim_tutorial_pkgs/">ROS: AirSim Tutorial Packages</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../gazebo_drone/">Import Gazebo models</a>
                     </li>
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Domain Randomization</a>
     <ul class="current">
@@ -127,12 +136,20 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../playback/">Playing Logs</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../voxel_grid/">Voxel Grid Generator</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../event_sim/">Event camera</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Design</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../design/">Architecture</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../code_structure/">Code Structure</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../adding_new_apis/">Adding new APIs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../modify_recording_data/">Modifying Recording Data</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../coding_guidelines/">Coding Guidelines</a>
                     </li>
@@ -150,6 +167,12 @@
                 <li class="toctree-l2"><a class="reference internal" href="../px4_setup/">PX4 Setup for AirSim</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../px4_sitl/">PX4 in SITL</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_sitl_wsl2/">PX4 SITL with WSL 2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_lockstep/">PX4 Lockstep</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_multi_vehicle/">PX4 Multi-vehicle in SITL</a>
                 </li>
                 <li class="toctree-l2"><a class="" href="https://youtu.be/1oY8Qu5maQQ">AirSim with Pixhawk</a>
                 </li>
@@ -210,6 +233,10 @@
                     <li class="toctree-l1"><a class="reference internal" href="../drone_survey/">Surveying Using Drone</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../orbit/">Orbit Trajectory</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="https://youtu.be/Bp86WiLUC80">Importing a custom multirotor mesh</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../object_detection/">Object Detection</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Misc</span></p>
@@ -280,6 +307,7 @@
   
   <hr/>
 </div>
+
           <div role="main">
             <div class="section">
               
@@ -302,36 +330,31 @@ Use the same technique to add descriptive tags to groups of actors, which will b
 <p><img alt="Subset Editing" src="../images/tex_swap_subset.png" /></p>
 <h2 id="how-to-swap-textures-from-the-api">How to Swap Textures from the API<a class="headerlink" href="#how-to-swap-textures-from-the-api" title="Permanent link">#</a></h2>
 <p>The following API is available in C++ and python. (C++ shown)</p>
-<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">simSwapTextures</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">tags</span><span class="p">,</span> <span class="kt">int</span> <span class="n">tex_id</span><span class="p">);</span>
-</code></pre></div>
-
+<pre class="highlight"><code class="language-C++">std::vector&lt;std::string&gt; simSwapTextures(const std::string&amp; tags, int tex_id);</code></pre>
 <p>The string of "," or ", " delimited tags identifies on which actors to perform the swap.
 The tex_id indexes the array of textures assigned to each actor undergoing a swap.
 The function will return the list of objects which matched the provided tags and had the texture swap perfomed.
 If tex_id is out-of-bounds for some object's texture set, it will be taken modulo the number of textures that were available.</p>
 <p>Demo (Python):</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">airsim</span>
-<span class="kn">import</span> <span class="nn">time</span>
+<pre class="highlight"><code class="language-Python">import airsim
+import time
 
-<span class="n">c</span> <span class="o">=</span> <span class="n">airsim</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">MultirotorClient</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">simSwapTextures</span><span class="p">(</span><span class="s2">&quot;furniture&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">simSwapTextures</span><span class="p">(</span><span class="s2">&quot;chair&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">simSwapTextures</span><span class="p">(</span><span class="s2">&quot;table&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">simSwapTextures</span><span class="p">(</span><span class="s2">&quot;chair, right&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-</code></pre></div>
-
+c = airsim.client.MultirotorClient()
+print(c.simSwapTextures("furniture", 0))
+time.sleep(2)
+print(c.simSwapTextures("chair", 1))
+time.sleep(2)
+print(c.simSwapTextures("table", 1))
+time.sleep(2)
+print(c.simSwapTextures("chair, right", 0))</code></pre>
 <p>Results:</p>
-<div class="highlight"><pre><span></span><code><span class="o">[</span><span class="s1">&#39;RetexturableChair&#39;</span>, <span class="s1">&#39;RetexturableChair2&#39;</span>, <span class="s1">&#39;RetexturableTable&#39;</span><span class="o">]</span>
-<span class="o">[</span><span class="s1">&#39;RetexturableChair&#39;</span>, <span class="s1">&#39;RetexturableChair2&#39;</span><span class="o">]</span>
-<span class="o">[</span><span class="s1">&#39;RetexturableTable&#39;</span><span class="o">]</span>
-<span class="o">[</span><span class="s1">&#39;RetexturableChair2&#39;</span><span class="o">]</span>
-</code></pre></div>
-
+<pre class="highlight"><code class="language-bash">['RetexturableChair', 'RetexturableChair2', 'RetexturableTable']
+['RetexturableChair', 'RetexturableChair2']
+['RetexturableTable']
+['RetexturableChair2']</code></pre>
 <p><img alt="Demo" src="../images/tex_swap_demo.gif" /></p>
 <p>Note that in this example, different textures were chosen on each actor for the same index value.</p>
+<p>You can also use the <code>simSetObjectMaterial</code> and <code>simSetObjectMaterialFromTexture</code> APIs to set an object's material to any material asset or filepath of a texture. For more information on using these APIs, see <a href="../apis/#texture-apis">Texture APIs</a>.</p>
               
             </div>
           </div>
@@ -342,7 +365,7 @@ If tex_id is out-of-bounds for some object's texture set, it will be taken modul
         <a href="../meshes/" class="btn btn-neutral float-right" title="Mesh Vertex Buffers">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../airsim_tutorial_pkgs/" class="btn btn-neutral" title="ROS: AirSim Tutorial Packages"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../gazebo_drone/" class="btn btn-neutral" title="Import Gazebo models"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -352,7 +375,7 @@ If tex_id is out-of-bounds for some object's texture set, it will be taken modul
   <div role="contentinfo">
     <!-- Copyright etc -->
     
-      <p>Copyright &copy; 2018 Microsoft Research</p>
+      <p>Copyright &copy; 2021 Microsoft Research</p>
     
   </div>
 
@@ -367,20 +390,25 @@ If tex_id is out-of-bounds for some object's texture set, it will be taken modul
   </div>
 
   <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-          <a href="https://github.com/microsoft/airsim/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
-      
-      
-        <span><a href="../airsim_tutorial_pkgs/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../meshes/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/microsoft/airsim/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../gazebo_drone/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../meshes/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
     <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
     <script src="../js/theme.js" defer></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
       <script src="../search/main.js" defer></script>
     <script defer>
         window.onload = function () {

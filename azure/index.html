@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
   
   <script>
     // Current page data
@@ -25,9 +25,8 @@
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
-  
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -41,7 +40,7 @@
         <a href=".." class="icon icon-home"> AirSim</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -56,7 +55,7 @@
                     <li class="toctree-l1"><a class="reference internal" href="../CHANGELOG/">Changelog</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">Get AirSim</span></p>
+                <p class="caption"><span class="caption-text">Building AirSim</span></p>
                 <ul class="current">
                     <li class="toctree-l1"><a class="reference internal" href="../use_precompiled/">Download Binaries</a>
                     </li>
@@ -98,6 +97,8 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../unity_api_support/">Unity APIs</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../build_faq/">FAQ</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Using AirSim</span></p>
                 <ul>
@@ -125,15 +126,23 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../multi_vehicle/">Multiple Vehicles</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../sensors/">Sensors</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../lidar/">LIDAR</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../InfraredCamera/">Infrared Camera</a>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Sensors</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../sensors/">Sensors</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lidar/">LIDAR</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../distance_sensor/">Distance Sensor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../InfraredCamera/">Infrared Camera</a>
+                </li>
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../airsim_ros_pkgs/">ROS: AirSim ROS Wrapper</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../airsim_tutorial_pkgs/">ROS: AirSim Tutorial Packages</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../gazebo_drone/">Import Gazebo models</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../retexturing/">Domain Randomization</a>
                     </li>
@@ -141,12 +150,20 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../playback/">Playing Logs</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../voxel_grid/">Voxel Grid Generator</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../event_sim/">Event camera</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Design</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../design/">Architecture</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../code_structure/">Code Structure</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../adding_new_apis/">Adding new APIs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../modify_recording_data/">Modifying Recording Data</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../coding_guidelines/">Coding Guidelines</a>
                     </li>
@@ -164,6 +181,12 @@
                 <li class="toctree-l2"><a class="reference internal" href="../px4_setup/">PX4 Setup for AirSim</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../px4_sitl/">PX4 in SITL</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_sitl_wsl2/">PX4 SITL with WSL 2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_lockstep/">PX4 Lockstep</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_multi_vehicle/">PX4 Multi-vehicle in SITL</a>
                 </li>
                 <li class="toctree-l2"><a class="" href="https://youtu.be/1oY8Qu5maQQ">AirSim with Pixhawk</a>
                 </li>
@@ -225,6 +248,10 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../orbit/">Orbit Trajectory</a>
                     </li>
+                    <li class="toctree-l1"><a class="" href="https://youtu.be/Bp86WiLUC80">Importing a custom multirotor mesh</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../object_detection/">Object Detection</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Misc</span></p>
                 <ul>
@@ -279,7 +306,7 @@
     
       
         
-          <li>Get AirSim &raquo;</li>
+          <li>Building AirSim &raquo;</li>
         
       
     
@@ -294,6 +321,7 @@
   
   <hr/>
 </div>
+
           <div role="main">
             <div class="section">
               
@@ -312,8 +340,7 @@
 </li>
 <li>
 <p>To avoid charges for the Virtual Machine usage while not in use, remember to deallocate its resources from the <a href="https://portal.azure.com">Azure Portal</a> or use the following command from the Azure CLI:
-<div class="highlight"><pre><span></span><code>az vm deallocate --resource-group MyResourceGroup --name MyVMName
-</code></pre></div></p>
+<pre class="highlight"><code class="language-bash">az vm deallocate --resource-group MyResourceGroup --name MyVMName</code></pre></p>
 </li>
 </ul>
 <h2 id="code-and-debug-from-visual-studio-code-and-remote-ssh">Code and debug from Visual Studio Code and Remote SSH<a class="headerlink" href="#code-and-debug-from-visual-studio-code-and-remote-ssh" title="Permanent link">#</a></h2>
@@ -350,13 +377,11 @@ To be able to reach the VM from the local Python code, it is required to keep th
 <h2 id="running-with-docker">Running with Docker<a class="headerlink" href="#running-with-docker" title="Permanent link">#</a></h2>
 <p>Once both the AirSim environment and the Python application are ready, you can package everything as a Docker image. The sample project inside the <code>azure</code> directory is already prepared to run a prebuilt AirSim binary and Python code using Docker.</p>
 <p>This would be a perfect scenario when you want to run the simulation at scale. For instance, you could have several different configurations for the same simulation and execute them in a parallel, unattended way using a Docker image on Azure Container Services</p>
-<p>Since AirSim requires access to the host GPU, it is required to use a Docker runtime that supports it. For more information about running AirSim in Docker, click <a href="https://github.com/microsoft/AirSim/blob/master/docs/docker_ubuntu.md">here</a>.</p>
+<p>Since AirSim requires access to the host GPU, it is required to use a Docker runtime that supports it. For more information about running AirSim in Docker, click <a href="../docker_ubuntu/">here</a>.</p>
 <p>When using Azure Container Services to run this image, the only extra-requirement is to add GPU support to the Container Group where it will be deployed. </p>
 <p>It can use either public docker images from DockerHub or images deployed to a private Azure Container Registry</p>
 <h3 id="building-the-docker-image">Building the docker image<a class="headerlink" href="#building-the-docker-image" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code>docker build -t &lt;your-registry-url&gt;/&lt;your-image-name&gt; -f ./docker/Dockerfile .<span class="sb">`</span>
-</code></pre></div>
-
+<pre class="highlight"><code class="language-bash">docker build -t &lt;your-registry-url&gt;/&lt;your-image-name&gt; -f ./docker/Dockerfile .`</code></pre>
 <h2 id="using-a-different-airsim-binary">Using a different AirSim binary<a class="headerlink" href="#using-a-different-airsim-binary" title="Permanent link">#</a></h2>
 <p>To use a different AirSim binary, first check the official documentation on <a href="../build_windows/">How to Build AirSim on Windows</a> and <a href="../build_linux/">How to Build AirSim on Linux</a> if you also want to run it with Docker</p>
 <p>Once you have a zip file with the new AirSim environment (or prefer to use one from the <a href="https://github.com/microsoft/AirSim/releases">Official Releases</a>), you need to modify some of the scripts in the <code>azure</code> directory of the repository to point to the new environment:
@@ -387,7 +412,7 @@ To be able to reach the VM from the local Python code, it is required to keep th
   <div role="contentinfo">
     <!-- Copyright etc -->
     
-      <p>Copyright &copy; 2018 Microsoft Research</p>
+      <p>Copyright &copy; 2021 Microsoft Research</p>
     
   </div>
 
@@ -402,20 +427,25 @@ To be able to reach the VM from the local Python code, it is required to keep th
   </div>
 
   <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-          <a href="https://github.com/microsoft/airsim/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
-      
-      
-        <span><a href="../docker_ubuntu/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../unreal_custenv/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/microsoft/airsim/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../docker_ubuntu/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../unreal_custenv/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
     <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
     <script src="../js/theme.js" defer></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
       <script src="../search/main.js" defer></script>
     <script defer>
         window.onload = function () {

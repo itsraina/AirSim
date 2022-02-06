@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
   
   <script>
     // Current page data
@@ -25,9 +25,8 @@
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
-  
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -41,7 +40,7 @@
         <a href=".." class="icon icon-home"> AirSim</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -56,7 +55,7 @@
                     <li class="toctree-l1"><a class="reference internal" href="../CHANGELOG/">Changelog</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">Get AirSim</span></p>
+                <p class="caption"><span class="caption-text">Building AirSim</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../use_precompiled/">Download Binaries</a>
                     </li>
@@ -75,6 +74,8 @@
                     <li class="toctree-l1"><a class="reference internal" href="../custom_unity_environments/">Custom Unity Environment</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../unity_api_support/">Unity APIs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../build_faq/">FAQ</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Using AirSim</span></p>
@@ -103,21 +104,33 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../multi_vehicle/">Multiple Vehicles</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../sensors/">Sensors</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../lidar/">LIDAR</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../InfraredCamera/">Infrared Camera</a>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Sensors</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../sensors/">Sensors</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lidar/">LIDAR</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../distance_sensor/">Distance Sensor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../InfraredCamera/">Infrared Camera</a>
+                </li>
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../airsim_ros_pkgs/">ROS: AirSim ROS Wrapper</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../airsim_tutorial_pkgs/">ROS: AirSim Tutorial Packages</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../gazebo_drone/">Import Gazebo models</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../retexturing/">Domain Randomization</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../meshes/">Mesh Vertex Buffers</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../playback/">Playing Logs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../voxel_grid/">Voxel Grid Generator</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../event_sim/">Event camera</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Design</span></p>
@@ -126,9 +139,15 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../code_structure/">Code Structure</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../adding_new_apis/">Adding new APIs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../modify_recording_data/">Modifying Recording Data</a>
+                    </li>
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Coding Guidelines</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#quick-note">Quick Note</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#clang-format">clang-format</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#naming-conventions">Naming Conventions</a>
     </li>
@@ -141,6 +160,12 @@
     <li class="toctree-l2"><a class="reference internal" href="#overriding">Overriding</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#pointers">Pointers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#null-checking">Null Checking</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#indentation">Indentation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#line-breaks">Line Breaks</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#this-is-too-short-ye">This is Too Short, ye?</a>
     </li>
@@ -160,6 +185,12 @@
                 <li class="toctree-l2"><a class="reference internal" href="../px4_setup/">PX4 Setup for AirSim</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../px4_sitl/">PX4 in SITL</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_sitl_wsl2/">PX4 SITL with WSL 2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_lockstep/">PX4 Lockstep</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_multi_vehicle/">PX4 Multi-vehicle in SITL</a>
                 </li>
                 <li class="toctree-l2"><a class="" href="https://youtu.be/1oY8Qu5maQQ">AirSim with Pixhawk</a>
                 </li>
@@ -220,6 +251,10 @@
                     <li class="toctree-l1"><a class="reference internal" href="../drone_survey/">Surveying Using Drone</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../orbit/">Orbit Trajectory</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="https://youtu.be/Bp86WiLUC80">Importing a custom multirotor mesh</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../object_detection/">Object Detection</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Misc</span></p>
@@ -290,6 +325,7 @@
   
   <hr/>
 </div>
+
           <div role="main">
             <div class="section">
               
@@ -298,6 +334,19 @@
 <h2 id="quick-note">Quick Note<a class="headerlink" href="#quick-note" title="Permanent link">#</a></h2>
 <p>The great thing about "standards" is that there are many to chose from: <a href="https://isocpp.org/wiki/faq/coding-standards">ISO</a>, <a href="https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md">Sutter &amp; Stroustrup</a>, <a href="http://wiki.ros.org/CppStyleGuide">ROS</a>, <a href="https://www.kernel.org/doc/Documentation/CodingStyle">LINUX</a>, <a href="https://google.github.io/styleguide/cppguide.html">Google's</a>, <a href="https://msdn.microsoft.com/en-us/library/888a6zcz.aspx">Microsoft's</a>, <a href="http://atlas-computing.web.cern.ch/atlas-computing/projects/qa/draft_guidelines.html">CERN's</a>, <a href="https://gcc.gnu.org/wiki/CppConventions">GCC's</a>, <a href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0475c/CJAJAJCJ.html">ARM's</a>, <a href="http://llvm.org/docs/CodingStandards.html">LLVM's</a> and probably 
 thousands of others. Unfortunately most of these can't even agree on something as basic as how to name a class or a constant. This is probably due to the fact that these standards often carry lots of  legacy issues due to supporting existing code bases. The intention behind this document is to create guidance that remains as close to ISO, Sutter &amp; Stroustrup and ROS while resolving as many conflicts, disadvantages and inconsistencies as possible among them.</p>
+<h2 id="clang-format">clang-format<a class="headerlink" href="#clang-format" title="Permanent link">#</a></h2>
+<p>Formatting the syntax of C++ is normalized by the clang-format tool which has settings checked into
+this project in the file <code>.clang-format</code>. These settings are set to match the formatting guidelines
+listed below.  You can "format" a file using clang-format command line or by enabling Visual Studio
+automatic-clang formatting either during every edit or when you save the file.  All files have been
+formatted this way and the github workflow called <code>clang-format</code> will also ensure all pull requests
+are correctly formatted so it should stay clean.  Obviously this does not include external code like
+<code>Eigen</code> or <code>rpclib</code>.  </p>
+<p>If you find a bug in clang-format you can disable clang formatting of a specific block of code by
+using the following comments pair:</p>
+<pre class="highlight"><code class="language-c++">// clang-format off
+...
+// clang-format on</code></pre>
 <h2 id="naming-conventions">Naming Conventions<a class="headerlink" href="#naming-conventions" title="Permanent link">#</a></h2>
 <p>Avoid using any sort of Hungarian notation on names and "_ptr" on pointers.</p>
 <table>
@@ -358,21 +407,19 @@ thousands of others. Unfortunately most of these can't even agree on something a
 </table>
 <h2 id="header-files">Header Files<a class="headerlink" href="#header-files" title="Permanent link">#</a></h2>
 <p>Use a namespace qualified #ifdef to protect against multiple inclusion:</p>
-<div class="highlight"><pre><span></span><code>#ifndef msr_airsim_MyHeader_hpp
+<pre class="highlight"><code>#ifndef msr_airsim_MyHeader_hpp
 #define msr_airsim_MyHeader_hpp
 
 //--your code
 
-#endif
-</code></pre></div>
-
+#endif</code></pre>
 <p>The reason we don't use #pragma once is because it's not supported if same header file exists at multiple places (which might be possible under ROS build system!).</p>
 <h2 id="bracketing">Bracketing<a class="headerlink" href="#bracketing" title="Permanent link">#</a></h2>
 <p>Inside function or method body place curly bracket on same line. 
 Outside that the Namespace, Class and methods levels use separate line.
 This is called <a href="https://en.wikipedia.org/wiki/Indent_style#K.26R_style">K&amp;R style</a> and its variants are widely used in C++ vs other styles which are more popular in other languages. 
 Notice that curlies are not required if you have single statement, but complex statements are easier to keep correct with the braces.</p>
-<div class="highlight"><pre><span></span><code>int main(int argc, char* argv[])
+<pre class="highlight"><code>int main(int argc, char* argv[])
 {
      while (x == y) {
         f0();
@@ -385,9 +432,7 @@ Notice that curlies are not required if you have single statement, but complex s
         if (x &gt; 100)
             break;
     }
-}
-</code></pre></div>
-
+}</code></pre>
 <h2 id="const-and-references">Const and References<a class="headerlink" href="#const-and-references" title="Permanent link">#</a></h2>
 <p>Religiously review all non-scalar parameters you declare to be candidate for const and references. If you are coming from languages such as C#/Java/Python,
 the most often mistake you would make is to pass parameters by value instead of <code>const T&amp;;</code> Especially most of the strings, vectors and maps you want to 
@@ -405,6 +450,16 @@ where performance is paramount, raw pointers can be used.  Raw pointers are also
 that only accept pointer types, for example, sockets API.  But we try to wrap those legacy interfaces as
 much as possible and avoid that style of programming from leaking into the larger code base.  </p>
 <p>Religiously check if you can use const everywhere, for example, <code>const float * const xP</code>. Avoid using prefix or suffix to indicate pointer types in variable names, i.e. use <code>my_obj</code> instead of <code>myobj_ptr</code> except in cases where it might make sense to differentiate variables better, for example, <code>int mynum = 5; int* mynum_ptr = mynum;</code></p>
+<h2 id="null-checking">Null Checking<a class="headerlink" href="#null-checking" title="Permanent link">#</a></h2>
+<p>In Unreal C++ code, when checking if a pointer is null, it is preferable to use <code>IsValid(ptr)</code>. In addition to checking for a null pointer, this function will also return whether a UObject is properly initialized. This is useful in situations where a UObject is in the process of being garbage collected but still set to a non-null value.</p>
+<h2 id="indentation">Indentation<a class="headerlink" href="#indentation" title="Permanent link">#</a></h2>
+<p>The C++ code base uses four spaces for indentation (not tabs).</p>
+<h2 id="line-breaks">Line Breaks<a class="headerlink" href="#line-breaks" title="Permanent link">#</a></h2>
+<p>Files should be committed with Unix line breaks. When working on Windows, git can be configured to checkout files with Windows line breaks and automatically convert from Windows to Unix line breaks when committing by running the following command:</p>
+<pre class="highlight"><code>git config --global core.autocrlf true</code></pre>
+<p>When working on Linux, it is preferable to configure git to checkout files with Unix line breaks by running the following command:</p>
+<pre class="highlight"><code>git config --global core.autocrlf input</code></pre>
+<p>For more details on this setting, see <a href="https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings">this documentation</a>.</p>
 <h2 id="this-is-too-short-ye">This is Too Short, ye?<a class="headerlink" href="#this-is-too-short-ye" title="Permanent link">#</a></h2>
 <p>Yes, and it's on purpose because no one likes to read 200 page coding guidelines. The goal here is to cover only most significant things which are 
 already not covered by <a href="http://shitalshah.com/p/how-to-enable-and-use-gcc-strict-mode-compilation/">strict mode compilation in GCC</a> and Level 4 
@@ -420,7 +475,7 @@ and <a href="http://shop.oreilly.com/product/0636920033707.do">Effective Modern 
         <a href="../flight_controller/" class="btn btn-neutral float-right" title="Flight Controller">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../code_structure/" class="btn btn-neutral" title="Code Structure"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../modify_recording_data/" class="btn btn-neutral" title="Modifying Recording Data"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -430,7 +485,7 @@ and <a href="http://shop.oreilly.com/product/0636920033707.do">Effective Modern 
   <div role="contentinfo">
     <!-- Copyright etc -->
     
-      <p>Copyright &copy; 2018 Microsoft Research</p>
+      <p>Copyright &copy; 2021 Microsoft Research</p>
     
   </div>
 
@@ -445,20 +500,25 @@ and <a href="http://shop.oreilly.com/product/0636920033707.do">Effective Modern 
   </div>
 
   <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-          <a href="https://github.com/microsoft/airsim/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
-      
-      
-        <span><a href="../code_structure/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../flight_controller/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/microsoft/airsim/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../modify_recording_data/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../flight_controller/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
     <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
     <script src="../js/theme.js" defer></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
       <script src="../search/main.js" defer></script>
     <script defer>
         window.onload = function () {

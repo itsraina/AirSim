@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
   
   <script>
     // Current page data
@@ -25,9 +25,8 @@
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
-  
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -41,7 +40,7 @@
         <a href=".." class="icon icon-home"> AirSim</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -56,7 +55,7 @@
                     <li class="toctree-l1"><a class="reference internal" href="../CHANGELOG/">Changelog</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">Get AirSim</span></p>
+                <p class="caption"><span class="caption-text">Building AirSim</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../use_precompiled/">Download Binaries</a>
                     </li>
@@ -75,6 +74,8 @@
                     <li class="toctree-l1"><a class="reference internal" href="../custom_unity_environments/">Custom Unity Environment</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../unity_api_support/">Unity APIs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../build_faq/">FAQ</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Using AirSim</span></p>
@@ -103,15 +104,23 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../multi_vehicle/">Multiple Vehicles</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../sensors/">Sensors</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../lidar/">LIDAR</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../InfraredCamera/">Infrared Camera</a>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Sensors</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../sensors/">Sensors</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../lidar/">LIDAR</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../distance_sensor/">Distance Sensor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../InfraredCamera/">Infrared Camera</a>
+                </li>
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../airsim_ros_pkgs/">ROS: AirSim ROS Wrapper</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../airsim_tutorial_pkgs/">ROS: AirSim Tutorial Packages</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../gazebo_drone/">Import Gazebo models</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../retexturing/">Domain Randomization</a>
                     </li>
@@ -119,12 +128,20 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../playback/">Playing Logs</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../voxel_grid/">Voxel Grid Generator</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../event_sim/">Event camera</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Design</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../design/">Architecture</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../code_structure/">Code Structure</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../adding_new_apis/">Adding new APIs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../modify_recording_data/">Modifying Recording Data</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../coding_guidelines/">Coding Guidelines</a>
                     </li>
@@ -142,6 +159,12 @@
                 <li class="toctree-l2"><a class="reference internal" href="../px4_setup/">PX4 Setup for AirSim</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../px4_sitl/">PX4 in SITL</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_sitl_wsl2/">PX4 SITL with WSL 2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_lockstep/">PX4 Lockstep</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_multi_vehicle/">PX4 Multi-vehicle in SITL</a>
                 </li>
                 <li class="toctree-l2"><a class="" href="https://youtu.be/1oY8Qu5maQQ">AirSim with Pixhawk</a>
                 </li>
@@ -161,9 +184,13 @@
     <ul class="current">
     <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#realtime">Realtime</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#configuration">Configuration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#debugging">Debugging</a>
     </li>
     </ul>
                 </li>
@@ -210,6 +237,10 @@
                     <li class="toctree-l1"><a class="reference internal" href="../drone_survey/">Surveying Using Drone</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../orbit/">Orbit Trajectory</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="https://youtu.be/Bp86WiLUC80">Importing a custom multirotor mesh</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../object_detection/">Object Detection</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Misc</span></p>
@@ -265,11 +296,11 @@
     
       
         
-          <li>MavLink and PX4 &raquo;</li>
+          <li>External Flight Controllers &raquo;</li>
         
       
         
-          <li>External Flight Controllers &raquo;</li>
+          <li>MavLink and PX4 &raquo;</li>
         
       
     
@@ -284,26 +315,61 @@
   
   <hr/>
 </div>
+
           <div role="main">
             <div class="section">
               
                 <h1 id="log-viewer">Log Viewer<a class="headerlink" href="#log-viewer" title="Permanent link">#</a></h1>
 <p>The LogViewer is a Windows WPF app that presents the MavLink streams that it is getting from the
 Unreal Simulator.  You can use this to monitor what is happening on the drone while it is flying.
-For example, the picture below shows  a real time graph of the x, y an z gyro sensor information being generated by the simulator.</p>
+For example, the picture below shows  a real time graph of the x, y an z gyro sensor information
+being generated by the simulator.</p>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">#</a></h3>
-<p>To use this LogViewer, connect the simulator <code>before</code> you run the simulation.  Simply press the blue connector
-button on the top right corner of the window, select the Socket <code>tab</code>, enter the port number 14388, and
-your <code>localhost</code> network.  Then press the record button (triangle on the right hand side of the toolbar).
-Now start the simulator, pick some mavlink items to graph,  you  should see something like this:</p>
+<p>You can open a log file, it supports .mavlink and PX4 *.ulg files, then you will see the contents of
+the log in a tree view on the left, whatever metrics you select will be added to the right the right
+side.  You can close each individual chart with the little close box in the top right of each chart
+and you can group charts so they share the same vertical axis using the group charts button on the
+top toolbar.</p>
 <p><img alt="Log Viewer" src="../images/log_viewer.png" /></p>
-<p>The drone view here is the actual estimated position coming from the PX4, so that is a great way to check
-whether the PX4 is in sync with the simulator.  Sometimes you can see some drift here as the attitude
-estimation catches up with reality, this is more visible after a bad crash.</p>
+<p>There is also a map option which will plot the GPS path the drone took.  You can also load multiple
+log files so you can compare the data from each.</p>
+<h3 id="realtime">Realtime<a class="headerlink" href="#realtime" title="Permanent link">#</a></h3>
+<p>You can also get a realtime view if you connect the LogViewer <code>before</code> you run the simulation.</p>
+<p><img alt="connect" src="../images/log_viewer_connect.png" /></p>
+<p>For this to work you need to configure the <code>settings.json</code> with the following settings:
+<pre class="highlight"><code>{
+    "SettingsVersion": 1.2,
+    "SimMode": "Multirotor",
+    "Vehicles": {
+        "PX4": {
+            ...,
+            "LogViewerHostIp": "127.0.0.1",
+            "LogViewerPort": 14388,
+        }
+    }
+}</code></pre></p>
+<p>Note: do not use the "Logs" setting when you want realtime LogViewer logging.  Logging to
+a file using "Logs" is mutually exclusive with LogViewer logging.</p>
+<p>Simply press the blue connector button on the top right corner of the window, select the Socket
+<code>tab</code>, enter the port number <code>14388</code>, and your <code>localhost</code> network.  If you are using WSL 2 on
+Windows then select <code>vEthernet (WSL)</code>.</p>
+<p>If you do choose <code>vEthernet (WSL)</code> then make sure you also set <code>LocalHostIp</code> and
+<code>LogViewerHostIp</code> to the matching WSL ethernet address, something like <code>172.31.64.1</code>.</p>
+<p>Then press the record button (triangle on the right hand side of the toolbar). Now start the
+simulator, and the data will start streaming into LogViewer.</p>
+<p>The drone view in Log Viewer shows the actual estimated position coming from the PX4, so that is a
+great way to check whether the PX4 is in sync with the simulator.  Sometimes you can see some drift
+here as the attitude estimation catches up with reality, this can become more visible after a bad
+crash.</p>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h3>
-<p>If you can't build the LogViewer.sln, there is also a <a href="http://www.lovettsoftware.com/LovettSoftware/Downloads/Px4LogViewer/Px4LogViewer.application">click once installer</a>.</p>
+<p>If you can't build the LogViewer.sln, there is also a <a href="https://lovettsoftwarestorage.blob.core.windows.net/downloads/Px4LogViewer/Px4LogViewer.application">click once
+installer</a>.</p>
 <h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h3>
-<p>The magic port number 14388 can be configured in the simulator by editing the <a href="../settings/">settings.json file</a>.</p>
+<p>The magic port number 14388 can be configured in the simulator by editing the <a href="../settings/">settings.json
+file</a>.  If you change the port number in LogViewer connection dialog then be sure
+to make the matching changes in your <code>settings.json</code> file.</p>
+<h3 id="debugging">Debugging<a class="headerlink" href="#debugging" title="Permanent link">#</a></h3>
+<p>See <a href="../px4_logging/">PX4 Logging</a> for more information on how to use the LogViewer to debug situations you are setting.</p>
               
             </div>
           </div>
@@ -324,7 +390,7 @@ estimation catches up with reality, this is more visible after a bad crash.</p>
   <div role="contentinfo">
     <!-- Copyright etc -->
     
-      <p>Copyright &copy; 2018 Microsoft Research</p>
+      <p>Copyright &copy; 2021 Microsoft Research</p>
     
   </div>
 
@@ -339,20 +405,25 @@ estimation catches up with reality, this is more visible after a bad crash.</p>
   </div>
 
   <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-          <a href="https://github.com/microsoft/airsim/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
-      
-      
-        <span><a href="../px4_logging/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../mavlinkcom/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/microsoft/airsim/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../px4_logging/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../mavlinkcom/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
     <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
     <script src="../js/theme.js" defer></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
       <script src="../search/main.js" defer></script>
     <script defer>
         window.onload = function () {

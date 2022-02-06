@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
   
   <script>
     // Current page data
@@ -25,9 +25,8 @@
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
-  
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -41,7 +40,7 @@
         <a href=".." class="icon icon-home"> AirSim</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -56,7 +55,7 @@
                     <li class="toctree-l1"><a class="reference internal" href="../CHANGELOG/">Changelog</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">Get AirSim</span></p>
+                <p class="caption"><span class="caption-text">Building AirSim</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../use_precompiled/">Download Binaries</a>
                     </li>
@@ -75,6 +74,8 @@
                     <li class="toctree-l1"><a class="reference internal" href="../custom_unity_environments/">Custom Unity Environment</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../unity_api_support/">Unity APIs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../build_faq/">FAQ</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Using AirSim</span></p>
@@ -103,31 +104,39 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../multi_vehicle/">Multiple Vehicles</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../sensors/">Sensors</a>
-                    </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">LIDAR</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="#">Sensors</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#enabling-lidar-on-a-vehicle">Enabling lidar on a vehicle</a>
+                <li class="toctree-l2"><a class="reference internal" href="../sensors/">Sensors</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">LIDAR</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#enabling-lidar-on-a-vehicle">Enabling lidar on a vehicle</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#lidar-configuration">Lidar configuration</a>
+    <li class="toctree-l3"><a class="reference internal" href="#lidar-configuration">Lidar configuration</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#server-side-visualization-for-debugging">Server side visualization for debugging</a>
+    <li class="toctree-l3"><a class="reference internal" href="#server-side-visualization-for-debugging">Server side visualization for debugging</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#client-api">Client API</a>
+    <li class="toctree-l3"><a class="reference internal" href="#client-api">Client API</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#python-examples">Python Examples</a>
+    <li class="toctree-l4"><a class="reference internal" href="#python-examples">Python Examples</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#coming-soon">Coming soon</a>
+    <li class="toctree-l3"><a class="reference internal" href="#coming-soon">Coming soon</a>
     </li>
     </ul>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../InfraredCamera/">Infrared Camera</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../distance_sensor/">Distance Sensor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../InfraredCamera/">Infrared Camera</a>
+                </li>
+    </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../airsim_ros_pkgs/">ROS: AirSim ROS Wrapper</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../airsim_tutorial_pkgs/">ROS: AirSim Tutorial Packages</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../gazebo_drone/">Import Gazebo models</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../retexturing/">Domain Randomization</a>
                     </li>
@@ -135,12 +144,20 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../playback/">Playing Logs</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../voxel_grid/">Voxel Grid Generator</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../event_sim/">Event camera</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Design</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../design/">Architecture</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../code_structure/">Code Structure</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../adding_new_apis/">Adding new APIs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../modify_recording_data/">Modifying Recording Data</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../coding_guidelines/">Coding Guidelines</a>
                     </li>
@@ -158,6 +175,12 @@
                 <li class="toctree-l2"><a class="reference internal" href="../px4_setup/">PX4 Setup for AirSim</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../px4_sitl/">PX4 in SITL</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_sitl_wsl2/">PX4 SITL with WSL 2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_lockstep/">PX4 Lockstep</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../px4_multi_vehicle/">PX4 Multi-vehicle in SITL</a>
                 </li>
                 <li class="toctree-l2"><a class="" href="https://youtu.be/1oY8Qu5maQQ">AirSim with Pixhawk</a>
                 </li>
@@ -219,6 +242,10 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../orbit/">Orbit Trajectory</a>
                     </li>
+                    <li class="toctree-l1"><a class="" href="https://youtu.be/Bp86WiLUC80">Importing a custom multirotor mesh</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../object_detection/">Object Detection</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Misc</span></p>
                 <ul>
@@ -276,6 +303,10 @@
           <li>Using AirSim &raquo;</li>
         
       
+        
+          <li>Sensors &raquo;</li>
+        
+      
     
     <li>LIDAR</li>
     <li class="wy-breadcrumbs-aside">
@@ -288,20 +319,23 @@
   
   <hr/>
 </div>
+
           <div role="main">
             <div class="section">
               
                 <h1 id="how-to-use-lidar-in-airsim">How to Use Lidar in AirSim<a class="headerlink" href="#how-to-use-lidar-in-airsim" title="Permanent link">#</a></h1>
-<p>AirSim supports Lidar for multirotors and cars. </p>
+<p>AirSim supports Lidar for multirotors and cars.</p>
 <p>The enablement of lidar and the other lidar settings can be configured via AirSimSettings json.
 Please see <a href="../sensors/">general sensors</a> for information on configruation of general/shared sensor settings.</p>
 <h2 id="enabling-lidar-on-a-vehicle">Enabling lidar on a vehicle<a class="headerlink" href="#enabling-lidar-on-a-vehicle" title="Permanent link">#</a></h2>
 <ul>
-<li>By default, lidars are not enabled. To enable lidar, set the SensorType and Enabled attributes in settings json.
-<div class="highlight"><pre><span></span><code>        &quot;Lidar1&quot;: { 
-             &quot;SensorType&quot;: 6,
-             &quot;Enabled&quot; : true,
-</code></pre></div></li>
+<li>By default, lidars are not enabled. To enable lidar, set the SensorType and Enabled attributes in settings json.</li>
+</ul>
+<pre class="highlight"><code class="language-json">    "Lidar1": {
+         "SensorType": 6,
+         "Enabled" : true,
+    }</code></pre>
+<ul>
 <li>Multiple lidars can be enabled on a vehicle.</li>
 </ul>
 <h2 id="lidar-configuration">Lidar configuration<a class="headerlink" href="#lidar-configuration" title="Permanent link">#</a></h2>
@@ -358,76 +392,89 @@ Please see <a href="../sensors/">general sensors</a> for information on configru
 <td>DataFrame</td>
 <td>Frame for the points in output ("VehicleInertialFrame" or "SensorLocalFrame")</td>
 </tr>
+<tr>
+<td>ExternalController</td>
+<td>Whether data is to be sent to external controller such as ArduPilot or PX4 if being used (default <code>true</code>) (PX4 doesn't send Lidar data currently)</td>
+</tr>
 </tbody>
 </table>
-<p>e.g.,
-<div class="highlight"><pre><span></span><code>{
-    &quot;SeeDocsAt&quot;: &quot;https://github.com/Microsoft/AirSim/blob/master/docs/settings_json.md&quot;,
-    &quot;SettingsVersion&quot;: 1.2,
+<p>e.g.</p>
+<pre class="highlight"><code class="language-json">{
+    "SeeDocsAt": "https://microsoft.github.io/AirSim/settings/",
+    "SettingsVersion": 1.2,
 
-    &quot;SimMode&quot;: &quot;Multirotor&quot;,
+    "SimMode": "Multirotor",
 
-     &quot;Vehicles&quot;: {
-        &quot;Drone1&quot;: {
-            &quot;VehicleType&quot;: &quot;simpleflight&quot;,
-            &quot;AutoCreate&quot;: true,
-            &quot;Sensors&quot;: {
-                &quot;LidarSensor1&quot;: { 
-                    &quot;SensorType&quot;: 6,
-                    &quot;Enabled&quot; : true,
-                    &quot;NumberOfChannels&quot;: 16,
-                    &quot;RotationsPerSecond&quot;: 10,
-                    &quot;PointsPerSecond&quot;: 100000,
-                    &quot;X&quot;: 0, &quot;Y&quot;: 0, &quot;Z&quot;: -1,
-                    &quot;Roll&quot;: 0, &quot;Pitch&quot;: 0, &quot;Yaw&quot; : 0,
-                    &quot;VerticalFOVUpper&quot;: -15,
-                    &quot;VerticalFOVLower&quot;: -25,
-                    &quot;HorizontalFOVStart&quot;: -20,
-                    &quot;HorizontalFOVEnd&quot;: 20,
-                    &quot;DrawDebugPoints&quot;: true,
-                    &quot;DataFrame&quot;: &quot;SensorLocalFrame&quot;
+     "Vehicles": {
+        "Drone1": {
+            "VehicleType": "simpleflight",
+            "AutoCreate": true,
+            "Sensors": {
+                "LidarSensor1": {
+                    "SensorType": 6,
+                    "Enabled" : true,
+                    "NumberOfChannels": 16,
+                    "RotationsPerSecond": 10,
+                    "PointsPerSecond": 100000,
+                    "X": 0, "Y": 0, "Z": -1,
+                    "Roll": 0, "Pitch": 0, "Yaw" : 0,
+                    "VerticalFOVUpper": -15,
+                    "VerticalFOVLower": -25,
+                    "HorizontalFOVStart": -20,
+                    "HorizontalFOVEnd": 20,
+                    "DrawDebugPoints": true,
+                    "DataFrame": "SensorLocalFrame"
                 },
-                &quot;LidarSensor2&quot;: { 
-                   &quot;SensorType&quot;: 6,
-                    &quot;Enabled&quot; : true,
-                    &quot;NumberOfChannels&quot;: 4,
-                    &quot;RotationsPerSecond&quot;: 10,
-                    &quot;PointsPerSecond&quot;: 10000,
-                    &quot;X&quot;: 0, &quot;Y&quot;: 0, &quot;Z&quot;: -1,
-                    &quot;Roll&quot;: 0, &quot;Pitch&quot;: 0, &quot;Yaw&quot; : 0,
-                    &quot;VerticalFOVUpper&quot;: -15,
-                    &quot;VerticalFOVLower&quot;: -25,
-                    &quot;DrawDebugPoints&quot;: true,
-                    &quot;DataFrame&quot;: &quot;SensorLocalFrame&quot;
+                "LidarSensor2": {
+                   "SensorType": 6,
+                    "Enabled" : true,
+                    "NumberOfChannels": 4,
+                    "RotationsPerSecond": 10,
+                    "PointsPerSecond": 10000,
+                    "X": 0, "Y": 0, "Z": -1,
+                    "Roll": 0, "Pitch": 0, "Yaw" : 0,
+                    "VerticalFOVUpper": -15,
+                    "VerticalFOVLower": -25,
+                    "DrawDebugPoints": true,
+                    "DataFrame": "SensorLocalFrame"
                 }
             }
         }
     }
-}
-</code></pre></div></p>
+}</code></pre>
 <h2 id="server-side-visualization-for-debugging">Server side visualization for debugging<a class="headerlink" href="#server-side-visualization-for-debugging" title="Permanent link">#</a></h2>
-<p>Be default, the lidar points are not drawn on the viewport. To enable the drawing of hit laser points on the viewport, please enable setting 'DrawDebugPoints' via settings json.
-e.g.,
-<div class="highlight"><pre><span></span><code>        &quot;Lidar1&quot;: { 
-             ...
-             &quot;DrawDebugPoints&quot;: true
-        },
-</code></pre></div></p>
+<p>By default, the lidar points are not drawn on the viewport. To enable the drawing of hit laser points on the viewport, please enable setting <code>DrawDebugPoints</code> via settings json.</p>
+<pre class="highlight"><code class="language-json">    "Lidar1": {
+         ...
+         "DrawDebugPoints": true
+    },</code></pre>
+<p><strong>Note:</strong> Enabling <code>DrawDebugPoints</code> can cause excessive memory usage and crash in releases <code>v1.3.1</code>, <code>v1.3.0</code>. This has been fixed in master and should work in later releases</p>
 <h2 id="client-api">Client API<a class="headerlink" href="#client-api" title="Permanent link">#</a></h2>
-<p>Use <code>getLidarData()</code> API to retrieve the Lidar data. 
-* The API returns a Point-Cloud as a flat array of floats along with the timestamp of the capture and lidar pose.
-* Point-Cloud: 
-  * The floats represent [x,y,z] coordinate for each point hit within the range in the last scan.
-  * The frame for the points in the output is configurable using "DataFrame" attribute
-  "" or "VehicleInertialFrame" -- default; returned points are in vehicle inertial frame (in NED, in meters)
-  "SensorLocalFrame" -- returned points are in lidar local frame (in NED, in meters)
-* Lidar Pose:
-    * Lidar pose in the vehicle inertial frame (in NED, in meters)
-    * Can be used to transform points to other frames.</p>
+<p>Use <code>getLidarData()</code> API to retrieve the Lidar data.</p>
+<ul>
+<li>The API returns a Point-Cloud as a flat array of floats along with the timestamp of the capture and lidar pose.</li>
+<li>Point-Cloud:<ul>
+<li>The floats represent [x,y,z] coordinate for each point hit within the range in the last scan.</li>
+<li>The frame for the points in the output is configurable using "DataFrame" attribute -<ul>
+<li>"" or <code>VehicleInertialFrame</code> -- default; returned points are in vehicle inertial frame (in NED, in meters)</li>
+<li><code>SensorLocalFrame</code> -- returned points are in lidar local frame (in NED, in meters)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Lidar Pose:<ul>
+<li>Lidar pose in the vehicle inertial frame (in NED, in meters)</li>
+<li>Can be used to transform points to other frames.</li>
+</ul>
+</li>
+<li>Segmentation: The segmentation of each lidar point's collided object</li>
+</ul>
 <h3 id="python-examples">Python Examples<a class="headerlink" href="#python-examples" title="Permanent link">#</a></h3>
 <ul>
-<li><a href="https://github.com/Microsoft/AirSim/tree/master/PythonClient//multirotor">drone_lidar.py</a></li>
-<li><a href="https://github.com/Microsoft/AirSim/tree/master/PythonClient//car">car_lidar.py</a></li>
+<li><a href="https://github.com/microsoft/AirSim/blob/master/PythonClient/multirotor/drone_lidar.py">drone_lidar.py</a></li>
+<li><a href="https://github.com/microsoft/AirSim/blob/master/PythonClient/car/car_lidar.py">car_lidar.py</a></li>
+<li><a href="https://github.com/microsoft/AirSim/blob/master/PythonClient/multirotor/sensorframe_lidar_pointcloud.py">sensorframe_lidar_pointcloud.py</a></li>
+<li><a href="https://github.com/microsoft/AirSim/blob/master/PythonClient/multirotor/vehicleframe_lidar_pointcloud.py">vehicleframe_lidar_pointcloud.py</a></li>
 </ul>
 <h2 id="coming-soon">Coming soon<a class="headerlink" href="#coming-soon" title="Permanent link">#</a></h2>
 <ul>
@@ -440,7 +487,7 @@ e.g.,
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../InfraredCamera/" class="btn btn-neutral float-right" title="Infrared Camera">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../distance_sensor/" class="btn btn-neutral float-right" title="Distance Sensor">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../sensors/" class="btn btn-neutral" title="Sensors"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -453,7 +500,7 @@ e.g.,
   <div role="contentinfo">
     <!-- Copyright etc -->
     
-      <p>Copyright &copy; 2018 Microsoft Research</p>
+      <p>Copyright &copy; 2021 Microsoft Research</p>
     
   </div>
 
@@ -468,20 +515,25 @@ e.g.,
   </div>
 
   <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-          <a href="https://github.com/microsoft/airsim/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
-      
-      
-        <span><a href="../sensors/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../InfraredCamera/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/microsoft/airsim/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../sensors/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../distance_sensor/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
     <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
     <script src="../js/theme.js" defer></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
       <script src="../search/main.js" defer></script>
     <script defer>
         window.onload = function () {
